@@ -128,12 +128,12 @@ the triplets:
         <rdf:type rdf:resource="&prov;SoftwareAgent"/>
     </owl:NamedIndividual>
     
-    <!-- extract and reproject bands -->
+    <!-- reproject -->
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/gdalwarp">
         <rdf:type rdf:resource="&prov;SoftwareAgent"/>
     </owl:NamedIndividual>
     
-    <!-- mosaic bands -->
+    <!-- convert to geotiff -->
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/gdal_translate">
         <rdf:type rdf:resource="&prov;SoftwareAgent"/>
     </owl:NamedIndividual>
@@ -157,9 +157,16 @@ the triplets:
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <prov:wasGeneratedBy rdf:resource="http://gstore.unm.edu/elseweb/downloadFromOSU#PRISM_ppt_stable_4kmM2_201301_asc.asc"/>
     </owl:NamedIndividual>
+
+    <!-- local geotiff -->
+    <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_20130.tif">
+        <rdf:type rdf:resource="&prov;Entity"/>
+        <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <prov:wasGeneratedBy rdf:resource="http://gstore.unm.edu/elseweb/convertAsciiToTif"/>
+    </owl:NamedIndividual>
     
     <!-- reproject -->
-    <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_201301.tif">
+    <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_20130_4326.tif">
         <rdf:type rdf:resource="&prov;Entity"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <prov:wasGeneratedBy rdf:resource="http://gstore.unm.edu/elseweb/Reproject"/>
@@ -192,14 +199,14 @@ the triplets:
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/Reproject">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdalwarp"/>
-        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_201301_asc.asc"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_201301.tif"/>
     </owl:NamedIndividual>
     
     <!-- publish wcs -->
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/Publish">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/GSTORE"/>
-        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_201301.tif"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_201301_4326.tif"/>
     </owl:NamedIndividual>
 </rdf:RDF>    
 
