@@ -192,7 +192,7 @@ the triplets:
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/convertAsciiToTif">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdal_translate"/>
-        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/?url=http://www.prism.oregonstate.edu/PRISM_ppt_stable_4kmM2_201301_asc.asc"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/PRISM_ppt_stable_4kmM2_201301_asc.asc"/>
     </owl:NamedIndividual>
     
     <!-- reproject geotiff -->
