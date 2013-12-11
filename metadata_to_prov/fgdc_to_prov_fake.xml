@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="ISO-8859-1"?><!DOCTYPE metadata SYSTEM "http://www.fgdc.gov/metadata/fgdc-std-001-1998.dtd">
+<metadata>
+    <idinfo>
+        <citation>
+            <citeinfo>
+                <origin>Somewhere</origin>
+                <pubdate>20130402</pubdate>
+                <title>Container for some lineage data to convert to basic PROV</title>
+                <geoform>vector digital data</geoform>
+            </citeinfo>
+        </citation>
+        <descript>
+            <abstract>Ignore everything except the lineage</abstract>
+            <purpose>FGDC to PROV proof of concept</purpose>
+            <supplinf>Should not be used by anyone</supplinf>
+        </descript>
+        <timeperd>
+            <timeinfo>
+                <rngdates>
+                    <begdate>20130301</begdate> 
+                    <enddate>20130331</enddate>
+                </rngdates>
+            </timeinfo>
+            <current>Ground Condition</current>
+        </timeperd>
+        <status>
+            <progress>Complete</progress>
+            <update>Unknown</update>
+        </status>
+        <spdom>
+            <bounding>
+                <westbc>-107.930153271</westbc>
+                <eastbc>-104.994718803</eastbc>
+                <northbc>38.5334870385</northbc>
+                <southbc>34.9674233732</southbc>
+            </bounding>
+        </spdom>
+        <keywords>
+            <theme>
+                <themekt>None</themekt>
+                <themekey>prov</themekey>
+                <themekey>fgdc</themekey>
+            </theme>
+        </keywords>
+        <accconst>None</accconst>
+        <useconst>None</useconst>
+        <ptcontac>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Unknown</cntorg>
+                </cntorgp>
+                <cntpos>Unknown</cntpos>
+                <cntaddr>
+                    <addrtype>Mailing address</addrtype>
+                    <address>Unknown</address>
+                    <city>Portland</city>
+                    <state>OR</state>
+                    <postal>97232-1274
+                    </postal>
+                </cntaddr>
+                <cntvoice>505-123-5555</cntvoice>
+            </cntinfo>
+        </ptcontac>
+    </idinfo>
+    <dataqual>
+        <logic>Not provided</logic>
+        <complete>Not provided</complete>
+        <lineage>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin></origin>
+                        <pubdate>2004</pubdate>
+                        <title>url=http://www.prism.oregonstate.edu/PRISM_ppt_stable_4kmM2_201301_asc.asc</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc></typesrc>
+                <srctime>
+                    <timeinfo>
+                        <sngdate>
+                            <caldate>2004</caldate>
+                        </sngdate>
+                    </timeinfo>
+                    <srccurr>Unknown</srccurr>
+                </srctime>
+                <srccitea>prism download</srccitea>
+                <srccontr>none</srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>CURL</origin>
+                        <pubdate></pubdate>
+                        <title>PRISM_ppt_stable_4kmM2_201301_asc.asc</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc></typesrc>
+                <srctime>
+                    <timeinfo>
+                        <sngdate>
+                            <caldate>2004</caldate>
+                        </sngdate>
+                    </timeinfo>
+                    <srccurr></srccurr>
+                </srctime>
+                <srccitea>Local ASCII</srccitea>
+                <srccontr></srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>gdal_translate</origin>
+                        <pubdate></pubdate>
+                        <title>PRISM_ppt_stable_4kmM2_20130.tif</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc></typesrc>
+                <srctime>
+                    <timeinfo>
+                        <sngdate>
+                            <caldate>2004</caldate>
+                        </sngdate>
+                    </timeinfo>
+                    <srccurr></srccurr>
+                </srctime>
+                <srccitea>Local Geotiff</srccitea>
+                <srccontr></srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>gdal_translate</origin>
+                        <pubdate></pubdate>
+                        <title>PRISM_ppt_stable_4kmM2_20130_4326.tif</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc></typesrc>
+                <srctime>
+                    <timeinfo>
+                        <sngdate>
+                            <caldate>2004</caldate>
+                        </sngdate>
+                    </timeinfo>
+                    <srccurr></srccurr>
+                </srctime>
+                <srccitea>Local WGS84 Geotiff</srccitea>
+                <srccontr></srccontr>
+            </srcinfo>
+            <srcinfo>
+                <srccite>
+                    <citeinfo>
+                        <origin>GSTORE</origin>
+                        <pubdate></pubdate>
+                        <title>04159323-f4db-4d53-8842-d42e430c5cb6</title>
+                    </citeinfo>
+                </srccite>
+                <typesrc></typesrc>
+                <srctime>
+                    <timeinfo>
+                        <sngdate>
+                            <caldate>2004</caldate>
+                        </sngdate>
+                    </timeinfo>
+                    <srccurr></srccurr>
+                </srctime>
+                <srccitea>WCS</srccitea>
+                <srccontr></srccontr>
+            </srcinfo>
+            <procstep>
+                <procdesc>[DownloadFromOSU] | Step one. download the data.</procdesc>
+                <srcused>prism download</srcused>
+                <srcused>Local ASCII</srcused>
+                <procdate>20040301</procdate>
+                <srcprod>Local ASCII</srcprod>
+            </procstep>
+            <procstep>
+                <procdesc>[convertAsciiToGeotiff] | Step two. convert ascii to geotiff</procdesc>
+                <srcused>Local ASCII</srcused>
+                <procdate>20040302</procdate>
+                <srcprod>Local Geotiff</srcprod>
+            </procstep>
+            <procstep>
+                <procdesc>[Reproject] | Step three. reproject geotiff to wgs84</procdesc>
+                <srcused>Local GeoTiff</srcused>
+                <procdate>20040303</procdate>
+                <srcprod>Local WGS84 Geotiff</srcprod>
+            </procstep>
+            <procstep>
+                <procdesc>[Publish] | Step four. publish to gstore as wcs service</procdesc>
+                <srcused>Local Geotiff</srcused>
+                <procdate>20040304</procdate>
+                <srcprod>WCS</srcprod>
+            </procstep>
+        </lineage>
+    </dataqual>
+    <metainfo>
+        <metd>20130402</metd>
+        <metc>
+            <cntinfo>
+                <cntorgp>
+                    <cntorg>Unknown</cntorg>
+                </cntorgp>
+                <cntpos>Unknown</cntpos>
+                <cntaddr>
+                    <addrtype>mailing address</addrtype>
+                    <address>Unknown</address>
+                    <city>Somewhere</city>
+                    <state>NM</state>
+                    <postal>87111</postal>
+                    <country>USA</country>
+                </cntaddr>
+                <cntvoice>505-333-5555</cntvoice>
+            </cntinfo>
+        </metc>
+        <metstdn>FGDC Content Standards for Digital Geospatial Metadata</metstdn>
+        <metstdv>FGDC-STD-001-1998</metstdv>
+        <mettc>local time</mettc>
+        <metextns>
+            <onlink>http://www.esri.com/metadata/esriprof80.html</onlink>
+            <metprof>ESRI Metadata Profile</metprof>
+        </metextns>
+    </metainfo>
+</metadata>
