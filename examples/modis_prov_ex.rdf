@@ -241,32 +241,32 @@ the triplets:
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/downloadFromNasa#MYD13Q1.A2013137.h09v04">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/curl"/>
-        <prov.used rdf:resource="http://gstore.unm.edu/elseweb/?url=http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h09v04.005.2013154121350.hdf"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/?url=http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h09v04.005.2013154121350.hdf"/>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/downloadFromNasa#MYD13Q1.A2013137.h10v04">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/curl"/>
-        <prov.used rdf:resource="http://gstore.unm.edu/elseweb/?url=http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h10v04.005.2013154122852.hdf"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/?url=http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h10v04.005.2013154122852.hdf"/>
     </owl:NamedIndividual>
     
     <!-- extract and reproject the initial hdf files -->
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/ExtractAndReproject#MYD13Q1.A2013137.h08v04">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdalwarp"/>
-        <prov.used rdf:resource="http://gstore.unm.edu/elseweb/MYD13Q1.A2013137.h08v04.005.2013154113835.hdf"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/MYD13Q1.A2013137.h08v04.005.2013154113835.hdf"/>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/ExtractAndReproject#MYD13Q1.A2013137.h09v04">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdalwarp"/>
-        <prov.used rdf:resource="http://gstore.unm.edu/elseweb/MYD13Q1.A2013137.h09v04.005.2013154121350.hdf"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/MYD13Q1.A2013137.h09v04.005.2013154121350.hdf"/>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/ExtractAndReproject#MYD13Q1.A2013137.h10v04">
         <rdf:type rdf:resource="&prov;Activity"/>
         <prov:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdalwarp"/>
-        <prov.used rdf:resource="http://gstore.unm.edu/elseweb/MYD13Q1.A2013137.h10v04.005.2013154122852.hdf"/>
+        <prov:used rdf:resource="http://gstore.unm.edu/elseweb/MYD13Q1.A2013137.h10v04.005.2013154122852.hdf"/>
     </owl:NamedIndividual>
     
     <!-- mosaic the three intermediate tifs -->
