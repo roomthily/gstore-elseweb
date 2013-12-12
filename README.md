@@ -67,7 +67,7 @@ The Dataset identifier is the source citation's title. The SoftwareAgent identif
 
 The processing step's srcused element is used in the activity's *used* element. The srcprod is used in the related dataset's *wasGeneratedBy* element. And the srcprod source's origin is used as the activity's *wasAssociatedWith* element. Multiple srcused elements are supported.
 
-The transform contains a parameter to define the ontology for the entities. The concatentation of this parameter and an identifier is used for the *about* and *resource* URIs. 
+The transform contains a parameter to define the ontology for the entities. The concatenation of this parameter and an identifier is used for the *about* and *resource* URIs. 
 
 ##ISO Lineage to PROV
 
@@ -200,7 +200,7 @@ The trace relies on the processing step's embedded source elements to identify t
 
 The processing step's input source is used in the activity's *used* element. The output source is used in the related dataset's *wasGeneratedBy* element. And the software reference is used as the activity's *wasAssociatedWith* element. Multiple input source elements are supported.
 
-The transform contains a parameter to define the ontology for the entities. The concatentation of this parameter and an identifier is used for the *about* and *resource* URIs.  
+The transform contains a parameter to define the ontology for the entities. The concatenation of this parameter and an identifier is used for the *about* and *resource* URIs.  
 
 ##Expected PROV Output 
 
