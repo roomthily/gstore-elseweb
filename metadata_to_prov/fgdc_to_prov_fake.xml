@@ -83,7 +83,7 @@
                     </timeinfo>
                     <srccurr>Unknown</srccurr>
                 </srctime>
-                <srccitea>prism download</srccitea>
+                <srccitea>Source URL</srccitea>
                 <srccontr>none</srccontr>
             </srcinfo>
             <srcinfo>
@@ -169,7 +169,7 @@
             <procstep>
                 <procdesc>[DownloadFromOSU] | Step one. download the data.</procdesc>
                 <srcused>prism download</srcused>
-                <srcused>Local ASCII</srcused>
+                <srcused>Source URL</srcused>
                 <procdate>20040301</procdate>
                 <srcprod>Local ASCII</srcprod>
             </procstep>
