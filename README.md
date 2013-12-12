@@ -246,7 +246,7 @@ This applies to both examples. As with all things PROV and ISO-19115, the "corre
     <owl:NamedIndividual rdf:about="http://a.schema.com/schema/Reproject">
         <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
         <prov:used rdf:resource="http://a.schema.com/schema/InputDataset.tif"/>
-        <prov:wasAssociatedWith rdf:resource="hhttp://a.schema.com/schema/gdal_translate"/>
+        <prov:wasAssociatedWith rdf:resource="http://a.schema.com/schema/gdal_translate"/>
     </owl:NamedIndividual>
     
 </rdf:RDF>
