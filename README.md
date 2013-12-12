@@ -212,7 +212,7 @@ This applies to both examples. As with all things PROV and ISO-19115, the "corre
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
 
     <owl:Ontology rdf:about="http://a.schema.com/schema/"/>
     
