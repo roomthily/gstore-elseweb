@@ -12,8 +12,7 @@ Uses lineage_to_rdf.xsl.
 
 ###XML Structure
 
-'''xml
-
+```xml
 <lineage>
     <srcinfo>
         <srccite>
@@ -62,7 +61,7 @@ Uses lineage_to_rdf.xsl.
         <srcprod>OutputDataset</srcprod>
     </procstep>
 </lineage>
-'''
+```
 
 The Dataset identifier is the source citation's title. The SoftwareAgent identifier is the source citation's origin. This element can be left blank. The Activity identifier is found in the processing step's description element (procdesc) as \[\{activity identifier\}\] | \{standard process description\}. 
 
@@ -81,7 +80,7 @@ This follows a similar pattern to the FGDC structure; however, the Source Used/S
 
 Note that this uses the Lineage-Extended schema (gmi:LE_ProcessStep) and not the basic Lineage schema (gmd:LI_ProcessStep). For those playing along at home, the [CSDGM to ISO 19115 transformation](https://github.com/edac/metadata) does not use the LE_ProcessStep structure, but this does carry over some of the assumptions made in that transform.
 
-'''xml
+```xml
 <gmd:dataQualityInfo>
     <gmd:DQ_DataQuality>
         <gmd:lineage>
@@ -193,7 +192,7 @@ Note that this uses the Lineage-Extended schema (gmi:LE_ProcessStep) and not the
         </gmd:lineage>
     </gmd:DQ_DataQuality>
 </gmd:dataQualityInfo>
-'''
+```
 
 The Dataset identifier is the source citation's title. Note that this is not from the processing step's embedded source elements. The SoftwareAgent identifier is the processing step's software reference title. The Activity identifier is found in the processing step's description element as \[\{activity identifier\}\] | \{standard process description\}. 
 
@@ -207,7 +206,7 @@ The transform contains a parameter to define the ontology for the entities. The 
 
 This applies to both examples. As with all things PROV and ISO-19115, the "correct" structure is in the eye of the beholder. 
 
-'''xml
+```xml
 <rdf:RDF xmlns="http://a.schema.com/schema/"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:prov="http://www.w3.org/ns/prov#"
@@ -251,7 +250,7 @@ This applies to both examples. As with all things PROV and ISO-19115, the "corre
     </owl:NamedIndividual>
     
 </rdf:RDF>
-'''
+```
 
 
 
