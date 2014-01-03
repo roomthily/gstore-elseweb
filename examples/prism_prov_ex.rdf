@@ -186,6 +186,13 @@ the triplets:
         <dcat:distribution>
             <dcat:Distribution>
                 <dcat:accessURL rdf:resource="http://gstore.unm.edu/apps/elseweb/datasets/04159323-f4db-4d53-8842-d42e430c5cb6/services/ogc/wcs?SERVICE=wcs&#38;REQUEST=GetCapabilities&#38;VERSION=1.1.2"/>
+                <dcat:mediaType>text/xml</dcat:mediaType>
+            </dcat:Distribution>
+        </dcat:distribution>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="http://gstore.unm.edu/apps/elseweb/datasets/04159323-f4db-4d53-8842-d42e430c5cb6/services.json"/>
+                <dcat:mediaType>text/json</dcat:mediaType>
             </dcat:Distribution>
         </dcat:distribution>
     </owl:NamedIndividual>
