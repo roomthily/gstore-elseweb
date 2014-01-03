@@ -65,7 +65,6 @@
                     <xsl:if test="$step-for-srcprod">
                         <prov:wasGeneratedBy rdf:resource="{fn:concat($schema-base, $step-for-srcprod)}"/>
                     </xsl:if>
-                    
                 </owl:NamedIndividual>
             </xsl:for-each>
             

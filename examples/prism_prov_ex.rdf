@@ -14,7 +14,8 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#">
     <owl:Ontology rdf:about="http://gstore.unm.edu/elseweb"/>
     
     <!-- 
@@ -149,6 +150,11 @@ the triplets:
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/?url=http://www.prism.oregonstate.edu/PRISM_ppt_stable_4kmM2_201301_asc.asc">
         <rdf:type rdf:resource="&prov;Entity"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="http://www.prism.oregonstate.edu/PRISM_ppt_stable_4kmM2_201301_asc.asc"/>
+            </dcat:Distribution>
+        </dcat:distribution>
     </owl:NamedIndividual>
     
     <!-- the local prism ascii -->
@@ -172,11 +178,16 @@ the triplets:
         <prov:wasGeneratedBy rdf:resource="http://gstore.unm.edu/elseweb/Reproject"/>
     </owl:NamedIndividual>
     
-    <!-- publish to gstore -->
+    <!-- publish to gstore and expose as wcs service -->
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/04159323-f4db-4d53-8842-d42e430c5cb6">
         <rdf:type rdf:resource="&prov;Entity"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <prov:wasGeneratedBy rdf:resource="http://gstore.unm.edu/elseweb/Publish"/>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="http://gstore.unm.edu/apps/elseweb/datasets/04159323-f4db-4d53-8842-d42e430c5cb6/services/ogc/wcs?SERVICE=wcs&#38;REQUEST=GetCapabilities&#38;VERSION=1.1.2"/>
+            </dcat:Distribution>
+        </dcat:distribution>
     </owl:NamedIndividual>
     
     <!-- ACTIVITIES -->

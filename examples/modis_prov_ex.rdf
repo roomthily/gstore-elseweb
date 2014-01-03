@@ -14,7 +14,8 @@
     xmlns:prov="http://www.w3.org/ns/prov#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:dcat="http://www.w3.org/ns/dcat#">
     <owl:Ontology rdf:about="http://gstore.unm.edu/elseweb"/>
 
 <!-- 
@@ -165,16 +166,31 @@ the triplets:
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/?url=http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h08v04.005.2013154113835.hdf">
         <rdf:type rdf:resource="&prov;Entity"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h08v04.005.2013154113835.hdf"/>
+            </dcat:Distribution>
+        </dcat:distribution>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/?url=http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h09v04.005.2013154121350.hdf">
         <rdf:type rdf:resource="&prov;Entity"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h09v04.005.2013154121350.hdf"/>
+            </dcat:Distribution>
+        </dcat:distribution>
     </owl:NamedIndividual>
     
     <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/?url=http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h10v04.005.2013154122852.hdf">
         <rdf:type rdf:resource="&prov;Entity"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="http://e4ftl01.cr.usgs.gov/MOLA/MYD13Q1.005/2013.05.17/MYD13Q1.A2013137.h10v04.005.2013154122852.hdf"/>
+            </dcat:Distribution>
+        </dcat:distribution>
     </owl:NamedIndividual>
     
     <!-- the local hdfs -->
@@ -227,6 +243,11 @@ the triplets:
         <rdf:type rdf:resource="&prov;Entity"/>
         <rdf:type rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
         <prov:wasGeneratedBy rdf:resource="http://gstore.unm.edu/elseweb/Publish"/>
+        <dcat:distribution>
+            <dcat:Distribution>
+                <dcat:accessURL rdf:resource="http://gstore.unm.edu/apps/elseweb/datasets/d6a4f875-a553-4f51-a45d-095eae4ea7c0/services/ogc/wcs?SERVICE=wcs&#38;REQUEST=GetCapabilities&#38;VERSION=1.1.2"/>
+            </dcat:Distribution>
+        </dcat:distribution>
     </owl:NamedIndividual>
     
     <!-- ACTIVITIES -->
