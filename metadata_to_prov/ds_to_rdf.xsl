@@ -62,7 +62,7 @@
                     </xsl:variable>
                     
                     <!-- <prov:wasGeneratedBy rdf:resource="{fn:concat($schema-base, $step-for-srcprod, '#', LI_Source/sourceCitation/CI_Citation/title/CharacterString)}"/>-->
-                    <xsl:if test="$step-for-srcprod">
+                    <xsl:if test="$step-for-srcprod[text() != '']">
                         <prov:wasGeneratedBy rdf:resource="{fn:concat($schema-base, $step-for-srcprod)}"/>
                     </xsl:if>
                 </owl:NamedIndividual>
@@ -80,14 +80,14 @@
                     <rdf:type rdf:resource="http://www.w3.org/ns/prov#Activity"/>
                     
                     <xsl:variable name="srcused" select="LE_ProcessStep/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']"/>
-                    <xsl:variable name="source" select="$all-sources[MD_Metadata[fn:concat('#', @id)=$srcused/@role]]"/>
+                    <xsl:variable name="source" select="$all-sources[fn:concat('#', @id)=$srcused/@role]"/>
                     
                     <xsl:variable name="software-agent" select="LE_ProcessStep/processingInformation/LE_Processing/softwareReference/CI_Citation/title/CharacterString"/>
                     
                     <!-- TODO: handle the multiple input datasets for one software agent correctly -->
                     <xsl:for-each select="$source">
                         <!-- dataset -->
-                        <prov:used rdf:resource="{fn:concat($schema-base, LI_Source/sourceCitation/CI_Citation/title/CharacterString)}"/>
+                        <prov:used rdf:resource="{fn:concat($schema-base, identificationInfo/MD_DataIdentification/citation/CI_Citation/title/CharacterString)}"/>
                         <!-- software agent -->
                         <prov:wasAssociatedWith rdf:resource="{fn:concat($schema-base, $software-agent)}"/>
                     </xsl:for-each>
