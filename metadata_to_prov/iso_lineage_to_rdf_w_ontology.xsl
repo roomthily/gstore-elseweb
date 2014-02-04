@@ -309,7 +309,7 @@
                     <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#Dataset')}"/>
                     <elseweb-data:coversTimePeriod rdf:resource="{fn:concat($instance, 'duration-', $source-id)}"/>
                     <elseweb-data:hasGeospatialProjection rdf:resource="{fn:concat($instance, 'projection-', $source-id)}"/>
-                    <elseweb-edac:wasPublishedBy rdf:resource="{fn:concat($instance, 'publish-', $source-id)}"/>
+                    <!--<elseweb-edac:wasPublishedBy rdf:resource="{fn:concat($instance, 'publish-', $source-id)}"/>-->
                     <elseweb-data:coversRegion rdf:resource="{fn:concat($instance, 'region-', $source-id)}"/>
                     <xsl:if test="$file-manifestation or $url-manifestation">
                         <elseweb-data:hasManifestation rdf:resource="{fn:concat($instance, 'manifestion-', $source-id)}"/>
