@@ -214,8 +214,7 @@
                     the worst assumption.)
                 </xsl:comment>
                 <!-- so go get the last processing step and its id to use that -->
-                <xsl:variable name="last-step" select="$all-steps[last()]/LE_ProcessStep"/>
-                <elseweb-edac:wasPublishedBy rdf:resource="{fn:concat($instance, $last-step/@id)}"/>
+                <elseweb-edac:wasPublishedBy rdf:resource="{fn:concat($instance, $all-steps[last()]/LE_ProcessStep/@id)}"/>
                 
                 <elseweb-data:coversRegion rdf:resource="{fn:concat($instance, 'region-', $output-uri)}"/>
                 <elseweb-data:hasUnits rdf:resource="{fn:concat($instance, 'units-', $output-uri)}"/>
