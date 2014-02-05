@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
     version="2.0" exclude-result-prefixes="fn xsl" xmlns:fn="http://www.w3.org/2005/xpath-functions"
-    xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/modis.owl#"
+    xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/prism.owl#"
     
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:elseweb-data="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#"
@@ -11,7 +11,7 @@
     xmlns:elseweb-edac="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#"
     >
     
-    <!-- removed: xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/modis.owl" -->
+    <!-- removed: xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/prism.owl" -->
     
     
     <xsl:import href="remove-namespaces.xsl" />
@@ -21,7 +21,7 @@
     <!-- this is not a long-, medium- or short-term solution. i don't see a reasonable generic structure right now, though. -->
     <xsl:param name="schema-base-data" select="'http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl'"/>
     <xsl:param name="schema-base-edac" select="'http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl'"/>
-    <xsl:param name="instance" select="'http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/'"/>
+    <xsl:param name="instance" select="'http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/'"/>
     
     <!-- strip out the iso namespaces. just makes it easier to read. -->
     <xsl:variable name="cleaned">
@@ -39,7 +39,7 @@
     <xsl:template match="/">
         <rdf:RDF>
             <!-- NOTE: not sure if this should change according to something -->
-            <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/modis.owl"/>
+            <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/prism.owl"/>
             
             <!-- and the stupidest xslt to date -->
             <xsl:comment>
@@ -96,6 +96,11 @@
             <owl:ObjectProperty rdf:about="{concat($schema-base-edac, '#wasOutputBy')}"/>
             
             <owl:ObjectProperty rdf:about="{concat($schema-base-edac, '#wasPublishedBy')}"/>
+            
+            <!-- TODO: replace this with the correct UNITS element from N. -->
+            <xsl:comment>temporary solution for the units</xsl:comment>
+            <owl:ObjectProperty rdf:about="{concat($schema-base-edac, '#hasUnits')}"/>
+            <owl:ObjectProperty rdf:about="{concat($schema-base-edac, '#hasUnitName')}"/>
             
             <xsl:comment>
 
@@ -155,27 +160,25 @@
             
             <owl:Class rdf:about="{concat($schema-base-edac, '#Download')}"/>
             
-            <owl:Class rdf:about="{concat($schema-base-edac, '#DownloadedMODISDataset')}"/>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#ConvertASCIIToTIFF')}"/>
             
-            <owl:Class rdf:about="{concat($schema-base-edac, '#ExtractAndReproject')}"/>
-            
-            <owl:Class rdf:about="{concat($schema-base-edac, '#ExtractedDataset')}"/>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#ConvertedDataset')}"/>
             
             <owl:Class rdf:about="{concat($schema-base-edac, '#Index')}"/>
             
-            <owl:Class rdf:about="{concat($schema-base-edac, '#MODISDataset')}"/>
-            
-            <owl:Class rdf:about="{concat($schema-base-edac, '#Mosaic')}"/>
-            
-            <owl:Class rdf:about="{concat($schema-base-edac, '#MosaicDataset')}"/>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#Dataset')}"/>
             
             <owl:Class rdf:about="{concat($schema-base-edac, '#Publish')}"/>
             
-            <owl:Class rdf:about="{concat($schema-base-edac, '#PublishedMODISDataset')}"/>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#PublishedDataset')}"/>
             
-            <owl:Class rdf:about="{concat($schema-base-edac, '#RGISDataBand')}"/>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#DataBand')}"/>
             
-            <owl:Class rdf:about="{concat($schema-base-edac, '#Vegetation')}"/>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#Precipitation')}"/>
+            
+            <!-- TODO: replace this with the correct UNITS element from N. -->
+            <xsl:comment>temporary solution for the units</xsl:comment>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#Units')}"/>
             
             <xsl:comment>
                 <!-- individuals -->
@@ -197,7 +200,7 @@
                 </owl:NamedIndividual>
             </xsl:for-each-group>
             
-            <xsl:comment>wcs modis dataset</xsl:comment>
+            <xsl:comment>wcs prism dataset</xsl:comment>
             <!-- the final output file (wcs representation) -->
             <xsl:variable name="output-uri" select="$cleaned/DS_Series/seriesMetadata/MI_Metadata/dataSetURI/CharacterString"/>
             <owl:NamedIndividual rdf:about="{$output-uri}">
@@ -215,7 +218,8 @@
                 <elseweb-edac:wasPublishedBy rdf:resource="{fn:concat($instance, $last-step/@id)}"/>
                 
                 <elseweb-data:coversRegion rdf:resource="{fn:concat($instance, 'region-', $output-uri)}"/>
-                <elseweb-data:hasManifestation rdf:resource="{fn:concat($instance, 'wcs-modis-manifestion-', $output-uri)}"/>
+                <elseweb-data:hasUnits rdf:resource="{fn:concat($instance, 'units-', $output-uri)}"/>
+                <elseweb-data:hasManifestation rdf:resource="{fn:concat($instance, 'manifestion-', $output-uri)}"/>
             </owl:NamedIndividual>
             
             <xsl:comment>the wcs</xsl:comment>
@@ -226,10 +230,6 @@
                 <elseweb-data:hasStartDate rdf:resource="{fn:concat($instance, 'date-2')}"/>
             </owl:NamedIndividual>
             <!-- hasGeospatialProjection -->
-            <xsl:comment>
-                this is somewhat problematic in iso, particularly for utm (here), where you can't identify the datum vs the projection.
-                also can't really always be sure it's epsg rather than esri, etc
-            </xsl:comment>
             <owl:NamedIndividual rdf:about="{fn:concat($instance, 'projection-', $output-uri)}">
                 <rdf:type rdf:type="{fn:concat($schema-base-data, '#Projection')}"/>
                 <elseweb-data:hasEPSGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">
@@ -253,14 +253,24 @@
                 </elseweb-data:hasUpperLatitude>
             </owl:NamedIndividual>
             <!-- hasManifestation -->
-            <owl:NamedIndividual rdf:about="{fn:concat($instance, 'wcs-modis-manifestion-', $output-uri)}">
+            <owl:NamedIndividual rdf:about="{fn:concat($instance, 'manifestion-', $output-uri)}">
                 <rdf:type rdf:type="{fn:concat($schema-base-data, '#WCSManifestation')}"/>
                 <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
                     <xsl:value-of select="fn:concat('http://gstore.unm.edu/apps/epscor/datasets/', $output-uri, '/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2')"/>
                 </elseweb-data:hasCapabilitiesDocumentURL>
             </owl:NamedIndividual>
             
-            <!-- the wcs modis date range -->
+            <!-- the units -->
+
+            <owl:NamedIndividual rdf:about="{fn:concat($instance, 'units-', $output-uri)}">
+                <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#Units')}"/>
+                <elseweb-data:hasUnitName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                    <xsl:value-of select="$cleaned/DS_Series/seriesMetadata/MI_Metadata/contentInfo/MD_CoverageDescription/dimension/MD_Band/units/UnitDefinition/name"/>
+                </elseweb-data:hasUnitName>
+            </owl:NamedIndividual>
+            
+            
+            <!-- the wcs date range -->
             <owl:NamedIndividual rdf:about="{fn:concat($instance, 'date-1')}">
                 <rdf:type rdf:type="{fn:concat($schema-base-data, '#Date')}"/>
                 <elseweb-data:hasDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema/dateTime">
@@ -278,21 +288,15 @@
             
             what's left:
             
-            three modis hdf5 access points from nasa
-                nasa-hdf-1
-                nasa-hdf-2
-                nasa-hdf-3
-            three local files
-                local-hdf-1
-                local-hdf-2
-                local-hdf-3
-            extract/reproject three bands
-                local-band-1
-                local-band-2
-                local-band-3
-            mosaic three bands
-                local-mosaic
-            publish mosaic
+            original prism ascii
+                osu-prism-ascii
+            local prism ascii
+                local-prism-ascii
+            convert ascii to tiff
+                local-prism-tiff
+            reproject local tiff
+                local-prism-tiff-wgs84
+            publish tiff
                 wcs-thing
             -->
             
@@ -312,7 +316,7 @@
                 </xsl:variable>
                 
                 <!-- check for a band identifier -->
-                <xsl:variable name="band-identifier" select="contentInfo/MD_CoverageDescription/dimension/MD_Band/descriptor/CharacterString"/>
+                <xsl:variable name="units-identifier" select="contentInfo/MD_CoverageDescription/dimension/MD_Band/units/UnitDefinition/name"/>
                 
                 <owl:NamedIndividual rdf:about="{@id}">
                     <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#Dataset')}"/>
@@ -328,8 +332,8 @@
                         <elseweb-edac:wasOutputBy rdf:resource="{fn:concat($instance, $generated-by)}"/>
                     </xsl:if>
                     
-                    <xsl:if test="$band-identifier">
-                        <elseweb-edac:hasDataBand rdf:resource="{fn:concat($instance, 'band-', $source-id)}"/>
+                    <xsl:if test="$units-identifier">
+                        <elseweb-edac:hasUnits rdf:resource="{fn:concat($instance, 'units-', $source-id)}"/>
                     </xsl:if>
                     
                 </owl:NamedIndividual>
@@ -347,30 +351,22 @@
                     </owl:NamedIndividual>
                 </xsl:if>
                 
-                <!-- the data band -->
-                <!-- TODO: handle mutliple bands?????? maybe not - that would actually be building a different dataset -->
-                <xsl:if test="$band-identifier">
-                    <owl:NamedIndividual rdf:about="{fn:concat($instance, 'band-', $source-id)}">
-                        <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#DataBand')}"/>
-                        <elseweb-data:hasBandIdentification rdf:resource="{fn:concat($instance, 'bandid-', $source-id)}"/>
-                        <elseweb-data:representsEntity rdf:resource="{fn:concat($instance, 'entity-', $source-id)}"/>
-                    </owl:NamedIndividual>
-                    
-                    <owl:NamedIndividual rdf:about="{fn:concat($instance, 'bandid-', $source-id)}">
-                        <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#BandIdentification')}"/>
-                        <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
-                            <xsl:value-of select="$band-identifier"/>
-                        </elseweb-data:hasBandName>
-                    </owl:NamedIndividual>
-                    
-                    <xsl:comment>
-                        this is also maybe tricky if we are relying on the keywords (and we still are)
-                    </xsl:comment>
-                    <owl:NamedIndividual rdf:about="{fn:concat($instance, 'entity-', $source-id)}">
-                        <xsl:variable name="entity-type" select="identificationInfo/MD_DataIdentification/descriptiveKeywords/MD_Keywords[thesaurusName/CI_Citation/title/CharacterString = 'OBOE']/keyword[1]/CharacterString"/>
-                        <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#', $entity-type)}"/>
+                <!-- the units -->
+                <xsl:if test="$units-identifier">
+                    <owl:NamedIndividual rdf:about="{fn:concat($instance, 'units-', $source-id)}">
+                        <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#Units')}"/>
+                        <elseweb-data:hasUnitName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                            <xsl:value-of select="$units-identifier"/>
+                        </elseweb-data:hasUnitName>
                     </owl:NamedIndividual>
                 </xsl:if>
+                <xsl:comment>
+                        this is also maybe tricky if we are relying on the keywords (and we still are)
+                    </xsl:comment>
+                <owl:NamedIndividual rdf:about="{fn:concat($instance, 'entity-', $source-id)}">
+                    <xsl:variable name="entity-type" select="identificationInfo/MD_DataIdentification/descriptiveKeywords/MD_Keywords[thesaurusName/CI_Citation/title/CharacterString = 'OBOE']/keyword[1]/CharacterString"/>
+                    <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#', $entity-type)}"/>
+                </owl:NamedIndividual>
                 
                 <!-- its region -->
                 <owl:NamedIndividual rdf:about="{fn:concat($instance, 'region-', $source-id)}">
@@ -439,12 +435,6 @@
                     <xsl:for-each select="LE_ProcessStep/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']">
                         <xsl:variable name="role" select="fn:translate(@role, '#', '')"/>
                         <elseweb-edac:hadInput rdf:resource="{$role}"/>
-                        
-                        <!-- add the input band if there is one -->
-                        <xsl:variable name="used" select="$all-sources[@id = $role]"/>
-                        <xsl:if test="$used/contentInfo/MD_CoverageDescription/dimension/MD_Band/descriptor/CharacterString">
-                            <elseweb-edac:hadInputBandID rdf:resource="{fn:concat($instance, 'bandid-', $used/@id)}"/>
-                        </xsl:if>
                     </xsl:for-each>
                     
                 </owl:NamedIndividual>

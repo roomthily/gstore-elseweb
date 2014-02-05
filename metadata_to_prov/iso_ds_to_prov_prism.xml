@@ -1,0 +1,1261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gmd:DS_Series xmlns:gss="http://www.isotc211.org/2005/gss"
+    xmlns:gts="http://www.isotc211.org/2005/gts" xmlns:gml="http://www.opengis.net/gml/3.2"
+    xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gco="http://www.isotc211.org/2005/gco"
+    xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmi="http://www.isotc211.org/2005/gmi"
+    xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr"
+    xmlns="http://www.isotc211.org/2005/gmi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.isotc211.org/2005/gmi http://www.ngdc.noaa.gov/metadata/published/xsd/schema.xsd">
+    <!-- FOR A PRISM EXAMPLE -->
+    <gmd:composedOf>
+        <gmd:DS_DataSet>
+            <!-- original prism file -->
+            <gmd:has>
+                <gmd:MD_Metadata id="OSU-PRISM-ASCII">
+                    <gmd:contact/>
+                    <gmd:dateStamp/>
+                    <gmd:dataSetURI>
+                        <gco:CharacterString>PRISM_ppt_stable_4kmM2_201301_asc.asc</gco:CharacterString>
+                    </gmd:dataSetURI>
+                    <gmd:referenceSystemInfo>
+                        <gmd:MD_ReferenceSystem>
+                            <gmd:referenceSystemIdentifier>
+                                <gmd:RS_Identifier>
+                                    <gmd:authority>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>NAD83</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date>
+                                                <gmd:CI_Date>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                    <gmd:dateType>
+                                                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+                                                    </gmd:dateType>
+                                                </gmd:CI_Date>
+                                            </gmd:date>
+                                            <gmd:citedResponsibleParty>
+                                                <gmd:CI_ResponsibleParty>
+                                                    <gmd:contactInfo>
+                                                        <gmd:CI_Contact>
+                                                            <gmd:onlineResource>
+                                                                <gmd:CI_OnlineResource>
+                                                                    <gmd:linkage>
+                                                                        <gmd:URL>
+                                                                            http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4269
+                                                                        </gmd:URL>
+                                                                    </gmd:linkage>
+                                                                </gmd:CI_OnlineResource>
+                                                            </gmd:onlineResource>
+                                                        </gmd:CI_Contact>
+                                                    </gmd:contactInfo>
+                                                    <gmd:role>
+                                                        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="resourceProvider">resourceProvider</gmd:CI_RoleCode>
+                                                    </gmd:role>
+                                                </gmd:CI_ResponsibleParty>
+                                            </gmd:citedResponsibleParty>
+                                        </gmd:CI_Citation>
+                                    </gmd:authority>
+                                    <gmd:code>
+                                        <gco:CharacterString>4269</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </gmd:referenceSystemIdentifier>
+                        </gmd:MD_ReferenceSystem>
+                    </gmd:referenceSystemInfo>
+                    <gmd:identificationInfo>
+                        <gmd:MD_DataIdentification>
+                            <gmd:citation>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                        <gco:CharacterString>http://www.prism.oregonstate.edu/PRISM_ppt_stable_4kmM2_201301_asc.asc</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:date>
+                                        <gmd:CI_Date>
+                                            <gmd:date>
+                                                <gco:Date>2013-12-12</gco:Date>
+                                            </gmd:date>
+                                            <gmd:dateType>
+                                                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+                                            </gmd:dateType>
+                                        </gmd:CI_Date>
+                                    </gmd:date>
+                                    <gmd:citedResponsibleParty>
+                                        <gmd:CI_ResponsibleParty>
+                                            <gmd:contactInfo>
+                                                <gmd:CI_Contact>
+                                                    <gmd:onlineResource>
+                                                        <gmd:CI_OnlineResource>
+                                                            <gmd:linkage>
+                                                                <gmd:URL>http://www.prism.oregonstate.edu/PRISM_ppt_stable_4kmM2_201301_asc.asc</gmd:URL>
+                                                            </gmd:linkage>
+                                                            <gmd:function>
+                                                                <gmd:CI_OnLineFunctionCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_OnLineFunctionCode" codeListValue="download"/>
+                                                            </gmd:function>
+                                                        </gmd:CI_OnlineResource>
+                                                    </gmd:onlineResource>
+                                                </gmd:CI_Contact>
+                                            </gmd:contactInfo>
+                                            <gmd:role></gmd:role>
+                                        </gmd:CI_ResponsibleParty>
+                                    </gmd:citedResponsibleParty>
+                                </gmd:CI_Citation>
+                            </gmd:citation>
+                            <gmd:abstract/>
+                            <gmd:resourceFormat>
+                                <gmd:MD_Format>
+                                    <gmd:name>
+                                        <gco:CharacterString>ASCII</gco:CharacterString>
+                                    </gmd:name>
+                                    <gmd:version>
+                                        <gco:CharacterString>1</gco:CharacterString>
+                                    </gmd:version>
+                                </gmd:MD_Format>
+                            </gmd:resourceFormat>
+                            <gmd:descriptiveKeywords>
+                                <gmd:MD_Keywords>
+                                    <gmd:keyword>
+                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                    </gmd:keyword>
+                                    <gmd:thesaurusName>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date></gmd:date>
+                                        </gmd:CI_Citation>
+                                    </gmd:thesaurusName>
+                                </gmd:MD_Keywords>
+                            </gmd:descriptiveKeywords>
+                            <gmd:language/>
+                            <gmd:extent>
+                                <gmd:EX_Extent>
+                                    <gmd:geographicElement>
+                                        <gmd:EX_GeographicBoundingBox id="geographicExtent_input">
+                                            <gmd:westBoundLongitude>
+                                                <gco:Decimal>-125.020679</gco:Decimal>
+                                            </gmd:westBoundLongitude>
+                                            <gmd:eastBoundLongitude>
+                                                <gco:Decimal>-66.479012</gco:Decimal>
+                                            </gmd:eastBoundLongitude>
+                                            <gmd:southBoundLatitude>
+                                                <gco:Decimal>24.062530</gco:Decimal>
+                                            </gmd:southBoundLatitude>
+                                            <gmd:northBoundLatitude>
+                                                <gco:Decimal>49.937530</gco:Decimal>
+                                            </gmd:northBoundLatitude>
+                                        </gmd:EX_GeographicBoundingBox>
+                                    </gmd:geographicElement>
+                                    <gmd:temporalElement>
+                                        <gmd:EX_TemporalExtent>
+                                            <gmd:extent>
+                                                <gml:TimePeriod gml:id="d1e42_input">
+                                                    <gml:description>ground condition</gml:description>
+                                                    <gml:beginPosition>2002-03-01</gml:beginPosition>
+                                                    <gml:endPosition>2002-03-31</gml:endPosition>
+                                                </gml:TimePeriod>
+                                            </gmd:extent>
+                                        </gmd:EX_TemporalExtent>
+                                    </gmd:temporalElement>
+                                </gmd:EX_Extent>
+                            </gmd:extent>
+                        </gmd:MD_DataIdentification>
+                    </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor/>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d36">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>millimeters</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
+                </gmd:MD_Metadata>
+            </gmd:has>
+
+            <!-- local file -->
+            <gmd:has>
+                <gmd:MD_Metadata id="LOCAL-PRISM-ASCII">
+                    <gmd:contact/>
+                    <gmd:dateStamp/>
+                    <gmd:dataSetURI>
+                        <gco:CharacterString>PRISM_ppt_stable_4kmM2_201301_asc.asc</gco:CharacterString>
+                    </gmd:dataSetURI>
+                    <gmd:referenceSystemInfo>
+                        <gmd:MD_ReferenceSystem>
+                            <gmd:referenceSystemIdentifier>
+                                <gmd:RS_Identifier>
+                                    <gmd:authority>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>NAD83</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date>
+                                                <gmd:CI_Date>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                    <gmd:dateType>
+                                                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+                                                    </gmd:dateType>
+                                                </gmd:CI_Date>
+                                            </gmd:date>
+                                            <gmd:citedResponsibleParty>
+                                                <gmd:CI_ResponsibleParty>
+                                                    <gmd:contactInfo>
+                                                        <gmd:CI_Contact>
+                                                            <gmd:onlineResource>
+                                                                <gmd:CI_OnlineResource>
+                                                                    <gmd:linkage>
+                                                                        <gmd:URL>
+                                                                            http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4269
+                                                                        </gmd:URL>
+                                                                    </gmd:linkage>
+                                                                </gmd:CI_OnlineResource>
+                                                            </gmd:onlineResource>
+                                                        </gmd:CI_Contact>
+                                                    </gmd:contactInfo>
+                                                    <gmd:role>
+                                                        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="resourceProvider">resourceProvider</gmd:CI_RoleCode>
+                                                    </gmd:role>
+                                                </gmd:CI_ResponsibleParty>
+                                            </gmd:citedResponsibleParty>
+                                        </gmd:CI_Citation>
+                                    </gmd:authority>
+                                    <gmd:code>
+                                        <gco:CharacterString>4269</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </gmd:referenceSystemIdentifier>
+                        </gmd:MD_ReferenceSystem>
+                    </gmd:referenceSystemInfo>
+                    <gmd:identificationInfo>
+                        <gmd:MD_DataIdentification>
+                            <gmd:citation>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                        <gco:CharacterString>PRISM_ppt_stable_4kmM2_201301_asc.asc</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:date>
+                                        <gmd:CI_Date>
+                                            <gmd:date>
+                                                <gco:Date>2013-12-12</gco:Date>
+                                            </gmd:date>
+                                            <gmd:dateType>
+                                                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+                                            </gmd:dateType>
+                                        </gmd:CI_Date>
+                                    </gmd:date>
+                                </gmd:CI_Citation>
+                            </gmd:citation>
+                            <gmd:abstract/>
+                            <gmd:resourceFormat>
+                                <gmd:MD_Format>
+                                    <gmd:name>
+                                        <gco:CharacterString>ASCII</gco:CharacterString>
+                                    </gmd:name>
+                                    <gmd:version>
+                                        <gco:CharacterString>1</gco:CharacterString>
+                                    </gmd:version>
+                                </gmd:MD_Format>
+                            </gmd:resourceFormat>
+                            <gmd:descriptiveKeywords>
+                                <gmd:MD_Keywords>
+                                    <gmd:keyword>
+                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                    </gmd:keyword>
+                                    <gmd:thesaurusName>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date></gmd:date>
+                                        </gmd:CI_Citation>
+                                    </gmd:thesaurusName>
+                                </gmd:MD_Keywords>
+                            </gmd:descriptiveKeywords>
+                            <gmd:language/>
+                            <gmd:extent>
+                                <gmd:EX_Extent>
+                                    <gmd:geographicElement>
+                                        <gmd:EX_GeographicBoundingBox id="geographicExtent_input2">
+                                            <gmd:westBoundLongitude>
+                                                <gco:Decimal>-125.020679</gco:Decimal>
+                                            </gmd:westBoundLongitude>
+                                            <gmd:eastBoundLongitude>
+                                                <gco:Decimal>-66.479012</gco:Decimal>
+                                            </gmd:eastBoundLongitude>
+                                            <gmd:southBoundLatitude>
+                                                <gco:Decimal>24.062530</gco:Decimal>
+                                            </gmd:southBoundLatitude>
+                                            <gmd:northBoundLatitude>
+                                                <gco:Decimal>49.937530</gco:Decimal>
+                                            </gmd:northBoundLatitude>
+                                        </gmd:EX_GeographicBoundingBox>
+                                    </gmd:geographicElement>
+                                    <gmd:temporalElement>
+                                        <gmd:EX_TemporalExtent>
+                                            <gmd:extent>
+                                                <gml:TimePeriod gml:id="d1e42_input2">
+                                                    <gml:description>ground condition</gml:description>
+                                                    <gml:beginPosition>2002-03-01</gml:beginPosition>
+                                                    <gml:endPosition>2002-03-31</gml:endPosition>
+                                                </gml:TimePeriod>
+                                            </gmd:extent>
+                                        </gmd:EX_TemporalExtent>
+                                    </gmd:temporalElement>
+                                </gmd:EX_Extent>
+                            </gmd:extent>
+                        </gmd:MD_DataIdentification>
+                    </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor/>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d34">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>millimeters</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
+                </gmd:MD_Metadata>
+            </gmd:has>
+            
+            <!-- ascii to geotiff -->
+            <gmd:has>
+                <gmd:MD_Metadata id="LOCAL-PRISM-TIFF">
+                    <gmd:contact/>
+                    <gmd:dateStamp/>
+                    <gmd:dataSetURI>
+                        <gco:CharacterString>PRISM_ppt_stable_4kmM2_201301.tif</gco:CharacterString>
+                    </gmd:dataSetURI>
+                    <gmd:referenceSystemInfo>
+                        <gmd:MD_ReferenceSystem>
+                            <gmd:referenceSystemIdentifier>
+                                <gmd:RS_Identifier>
+                                    <gmd:authority>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>NAD83</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date>
+                                                <gmd:CI_Date>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                    <gmd:dateType>
+                                                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+                                                    </gmd:dateType>
+                                                </gmd:CI_Date>
+                                            </gmd:date>
+                                            <gmd:citedResponsibleParty>
+                                                <gmd:CI_ResponsibleParty>
+                                                    <gmd:contactInfo>
+                                                        <gmd:CI_Contact>
+                                                            <gmd:onlineResource>
+                                                                <gmd:CI_OnlineResource>
+                                                                    <gmd:linkage>
+                                                                        <gmd:URL>
+                                                                            http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4269
+                                                                        </gmd:URL>
+                                                                    </gmd:linkage>
+                                                                </gmd:CI_OnlineResource>
+                                                            </gmd:onlineResource>
+                                                        </gmd:CI_Contact>
+                                                    </gmd:contactInfo>
+                                                    <gmd:role>
+                                                        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="resourceProvider">resourceProvider</gmd:CI_RoleCode>
+                                                    </gmd:role>
+                                                </gmd:CI_ResponsibleParty>
+                                            </gmd:citedResponsibleParty>
+                                        </gmd:CI_Citation>
+                                    </gmd:authority>
+                                    <gmd:code>
+                                        <gco:CharacterString>4269</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </gmd:referenceSystemIdentifier>
+                        </gmd:MD_ReferenceSystem>
+                    </gmd:referenceSystemInfo>
+                    <gmd:identificationInfo>
+                        <gmd:MD_DataIdentification>
+                            <gmd:citation>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                        <gco:CharacterString>PRISM_ppt_stable_4kmM2_201301.tif</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:date>
+                                        <gmd:CI_Date>
+                                            <gmd:date>
+                                                <gco:Date>2013-12-12</gco:Date>
+                                            </gmd:date>
+                                            <gmd:dateType>
+                                                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+                                            </gmd:dateType>
+                                        </gmd:CI_Date>
+                                    </gmd:date>
+                                </gmd:CI_Citation>
+                            </gmd:citation>
+                            <gmd:abstract/>
+                            <gmd:resourceFormat>
+                                <gmd:MD_Format>
+                                    <gmd:name>
+                                        <gco:CharacterString>GeoTIFF</gco:CharacterString>
+                                    </gmd:name>
+                                    <gmd:version>
+                                        <gco:CharacterString>1</gco:CharacterString>
+                                    </gmd:version>
+                                </gmd:MD_Format>
+                            </gmd:resourceFormat>
+                            <gmd:descriptiveKeywords>
+                                <gmd:MD_Keywords>
+                                    <gmd:keyword>
+                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                    </gmd:keyword>
+                                    <gmd:thesaurusName>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date></gmd:date>
+                                        </gmd:CI_Citation>
+                                    </gmd:thesaurusName>
+                                </gmd:MD_Keywords>
+                            </gmd:descriptiveKeywords>
+                            <gmd:language/>
+                            <gmd:extent>
+                                <gmd:EX_Extent>
+                                    <gmd:geographicElement>
+                                        <gmd:EX_GeographicBoundingBox id="geographicExtent_input3">
+                                            <gmd:westBoundLongitude>
+                                                <gco:Decimal>-125.020679</gco:Decimal>
+                                            </gmd:westBoundLongitude>
+                                            <gmd:eastBoundLongitude>
+                                                <gco:Decimal>-66.479012</gco:Decimal>
+                                            </gmd:eastBoundLongitude>
+                                            <gmd:southBoundLatitude>
+                                                <gco:Decimal>24.062530</gco:Decimal>
+                                            </gmd:southBoundLatitude>
+                                            <gmd:northBoundLatitude>
+                                                <gco:Decimal>49.937530</gco:Decimal>
+                                            </gmd:northBoundLatitude>
+                                        </gmd:EX_GeographicBoundingBox>
+                                    </gmd:geographicElement>
+                                    <gmd:temporalElement>
+                                        <gmd:EX_TemporalExtent>
+                                            <gmd:extent>
+                                                <gml:TimePeriod gml:id="d1e42_input3">
+                                                    <gml:description>ground condition</gml:description>
+                                                    <gml:beginPosition>2002-03-01</gml:beginPosition>
+                                                    <gml:endPosition>2002-03-31</gml:endPosition>
+                                                </gml:TimePeriod>
+                                            </gmd:extent>
+                                        </gmd:EX_TemporalExtent>
+                                    </gmd:temporalElement>
+                                </gmd:EX_Extent>
+                            </gmd:extent>
+                        </gmd:MD_DataIdentification>
+                    </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor/>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d35">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>millimeters</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
+                </gmd:MD_Metadata>
+            </gmd:has>
+            
+            <gmd:has>
+                <gmd:MD_Metadata id="LOCAL-PRISM-TIFF-WGS84">
+                    <gmd:contact/>
+                    <gmd:dateStamp/>
+                    <gmd:dataSetURI>
+                        <gco:CharacterString>PRISM_ppt_stable_4kmM2_201301_wgs84.tif</gco:CharacterString>
+                    </gmd:dataSetURI>
+                    <gmd:referenceSystemInfo>
+                        <gmd:MD_ReferenceSystem>
+                            <gmd:referenceSystemIdentifier>
+                                <gmd:RS_Identifier>
+                                    <gmd:authority>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>WGS 84</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date>
+                                                <gmd:CI_Date>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                    <gmd:dateType>
+                                                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+                                                    </gmd:dateType>
+                                                </gmd:CI_Date>
+                                            </gmd:date>
+                                            <gmd:citedResponsibleParty>
+                                                <gmd:CI_ResponsibleParty>
+                                                    <gmd:contactInfo>
+                                                        <gmd:CI_Contact>
+                                                            <gmd:onlineResource>
+                                                                <gmd:CI_OnlineResource>
+                                                                    <gmd:linkage>
+                                                                        <gmd:URL>
+                                                                            http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4326
+                                                                        </gmd:URL>
+                                                                    </gmd:linkage>
+                                                                </gmd:CI_OnlineResource>
+                                                            </gmd:onlineResource>
+                                                        </gmd:CI_Contact>
+                                                    </gmd:contactInfo>
+                                                    <gmd:role>
+                                                        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="resourceProvider">resourceProvider</gmd:CI_RoleCode>
+                                                    </gmd:role>
+                                                </gmd:CI_ResponsibleParty>
+                                            </gmd:citedResponsibleParty>
+                                        </gmd:CI_Citation>
+                                    </gmd:authority>
+                                    <gmd:code>
+                                        <gco:CharacterString>4326</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:RS_Identifier>
+                            </gmd:referenceSystemIdentifier>
+                        </gmd:MD_ReferenceSystem>
+                    </gmd:referenceSystemInfo>
+                    <gmd:identificationInfo>
+                        <gmd:MD_DataIdentification>
+                            <gmd:citation>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                        <gco:CharacterString>PRISM_ppt_stable_4kmM2_201301_wgs84.tif</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:date>
+                                        <gmd:CI_Date>
+                                            <gmd:date>
+                                                <gco:Date>2013-12-12</gco:Date>
+                                            </gmd:date>
+                                            <gmd:dateType>
+                                                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication"/>
+                                            </gmd:dateType>
+                                        </gmd:CI_Date>
+                                    </gmd:date>
+                                </gmd:CI_Citation>
+                            </gmd:citation>
+                            <gmd:abstract/>
+                            <gmd:resourceFormat>
+                                <gmd:MD_Format>
+                                    <gmd:name>
+                                        <gco:CharacterString>GeoTIFF</gco:CharacterString>
+                                    </gmd:name>
+                                    <gmd:version>
+                                        <gco:CharacterString>1</gco:CharacterString>
+                                    </gmd:version>
+                                </gmd:MD_Format>
+                            </gmd:resourceFormat>
+                            <gmd:descriptiveKeywords>
+                                <gmd:MD_Keywords>
+                                    <gmd:keyword>
+                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                    </gmd:keyword>
+                                    <gmd:thesaurusName>
+                                        <gmd:CI_Citation>
+                                            <gmd:title>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
+                                            </gmd:title>
+                                            <gmd:date></gmd:date>
+                                        </gmd:CI_Citation>
+                                    </gmd:thesaurusName>
+                                </gmd:MD_Keywords>
+                            </gmd:descriptiveKeywords>
+                            <gmd:language/>
+                            <gmd:extent>
+                                <gmd:EX_Extent>
+                                    <gmd:geographicElement>
+                                        <gmd:EX_GeographicBoundingBox id="geographicExtent_input4">
+                                            <gmd:westBoundLongitude>
+                                                <gco:Decimal>-125.020679</gco:Decimal>
+                                            </gmd:westBoundLongitude>
+                                            <gmd:eastBoundLongitude>
+                                                <gco:Decimal>-66.479012</gco:Decimal>
+                                            </gmd:eastBoundLongitude>
+                                            <gmd:southBoundLatitude>
+                                                <gco:Decimal>24.062530</gco:Decimal>
+                                            </gmd:southBoundLatitude>
+                                            <gmd:northBoundLatitude>
+                                                <gco:Decimal>49.937530</gco:Decimal>
+                                            </gmd:northBoundLatitude>
+                                        </gmd:EX_GeographicBoundingBox>
+                                    </gmd:geographicElement>
+                                    <gmd:temporalElement>
+                                        <gmd:EX_TemporalExtent>
+                                            <gmd:extent>
+                                                <gml:TimePeriod gml:id="d1e42_input4">
+                                                    <gml:description>ground condition</gml:description>
+                                                    <gml:beginPosition>2002-03-01</gml:beginPosition>
+                                                    <gml:endPosition>2002-03-31</gml:endPosition>
+                                                </gml:TimePeriod>
+                                            </gmd:extent>
+                                        </gmd:EX_TemporalExtent>
+                                    </gmd:temporalElement>
+                                </gmd:EX_Extent>
+                            </gmd:extent>
+                        </gmd:MD_DataIdentification>
+                    </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor/>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d39">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>millimeters</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
+                </gmd:MD_Metadata>
+            </gmd:has>
+        </gmd:DS_DataSet>
+    </gmd:composedOf>
+    <gmd:seriesMetadata>
+        <gmi:MI_Metadata>
+            <gmd:fileIdentifier>
+                <gco:CharacterString>RGIS::4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707::ISO-19115:2003</gco:CharacterString>
+            </gmd:fileIdentifier>
+            <gmd:language>
+                <gco:CharacterString>eng; USA</gco:CharacterString>
+            </gmd:language>
+            <gmd:characterSet>
+                <gmd:MD_CharacterSetCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CharacterSetCode" codeListValue="utf8"/>
+            </gmd:characterSet>
+            <gmd:hierarchyLevel>
+                <gmd:MD_ScopeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ScopeCode" codeListValue="dataset"/>
+            </gmd:hierarchyLevel>
+            <gmd:contact>
+                <gmd:CI_ResponsibleParty>
+                    <gmd:organisationName>
+                        <gco:CharacterString>NASA</gco:CharacterString>
+                    </gmd:organisationName>
+                    <gmd:contactInfo>
+                        <gmd:CI_Contact>
+                            <gmd:phone>
+                                <gmd:CI_Telephone>
+                                    <gmd:voice>
+                                        <gco:CharacterString></gco:CharacterString>
+                                    </gmd:voice>
+                                    <gmd:facsimile>
+                                        <gco:CharacterString></gco:CharacterString>
+                                    </gmd:facsimile>
+                                </gmd:CI_Telephone>
+                            </gmd:phone>
+                            <gmd:address>
+                                <gmd:CI_Address>
+                                    <gmd:deliveryPoint>
+                                        <gco:CharacterString></gco:CharacterString>
+                                    </gmd:deliveryPoint>
+                                    <gmd:city>
+                                        <gco:CharacterString></gco:CharacterString>
+                                    </gmd:city>
+                                    <gmd:administrativeArea>
+                                        <gco:CharacterString></gco:CharacterString>
+                                    </gmd:administrativeArea>
+                                    <gmd:postalCode>
+                                        <gco:CharacterString></gco:CharacterString>
+                                    </gmd:postalCode>
+                                    <gmd:country>
+                                        <gco:CharacterString>USA</gco:CharacterString>
+                                    </gmd:country>
+                                    <gmd:electronicMailAddress>
+                                        <gco:CharacterString></gco:CharacterString>
+                                    </gmd:electronicMailAddress>
+                                </gmd:CI_Address>
+                            </gmd:address>
+                        </gmd:CI_Contact>
+                    </gmd:contactInfo>
+                    <gmd:role>
+                        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact">pointOfContact</gmd:CI_RoleCode>
+                    </gmd:role>
+                </gmd:CI_ResponsibleParty>
+            </gmd:contact>
+            <gmd:dateStamp>
+                <gco:Date>2013-12-06</gco:Date>
+            </gmd:dateStamp>
+            <gmd:metadataStandardName>
+                <gco:CharacterString>ISO 19115-2 Geographic Information - Metadata - Part 2: Extensions for Imagery and Gridded Data</gco:CharacterString>
+            </gmd:metadataStandardName>
+            <gmd:metadataStandardVersion>
+                <gco:CharacterString>ISO 19115-2:2009(E)</gco:CharacterString>
+            </gmd:metadataStandardVersion>
+            <gmd:dataSetURI>
+                <gco:CharacterString>4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707</gco:CharacterString>
+            </gmd:dataSetURI>
+            <gmd:referenceSystemInfo>
+                <gmd:MD_ReferenceSystem>
+                    <gmd:referenceSystemIdentifier>
+                        <gmd:RS_Identifier>
+                            <gmd:authority>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                        <gco:CharacterString>WGS 84</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:date>
+                                        <gmd:CI_Date>
+                                            <gmd:date gco:nilReason="unknown"/>
+                                            <gmd:dateType>
+                                                <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="revision">revision</gmd:CI_DateTypeCode>
+                                            </gmd:dateType>
+                                        </gmd:CI_Date>
+                                    </gmd:date>
+                                    <gmd:citedResponsibleParty>
+                                        <gmd:CI_ResponsibleParty>
+                                            <gmd:contactInfo>
+                                                <gmd:CI_Contact>
+                                                    <gmd:onlineResource>
+                                                        <gmd:CI_OnlineResource>
+                                                            <gmd:linkage>
+                                                                <gmd:URL>
+                                                                    http://www.epsg-registry.org/export.htm?gml=urn:ogc:def:crs:EPSG::4326
+                                                                </gmd:URL>
+                                                            </gmd:linkage>
+                                                        </gmd:CI_OnlineResource>
+                                                    </gmd:onlineResource>
+                                                </gmd:CI_Contact>
+                                            </gmd:contactInfo>
+                                            <gmd:role>
+                                                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="resourceProvider">resourceProvider</gmd:CI_RoleCode>
+                                            </gmd:role>
+                                        </gmd:CI_ResponsibleParty>
+                                    </gmd:citedResponsibleParty>
+                                </gmd:CI_Citation>
+                            </gmd:authority>
+                            <gmd:code>
+                                <gco:CharacterString>4326</gco:CharacterString>
+                            </gmd:code>
+                        </gmd:RS_Identifier>
+                    </gmd:referenceSystemIdentifier>
+                </gmd:MD_ReferenceSystem>
+            </gmd:referenceSystemInfo>
+            <gmd:identificationInfo>
+                <gmd:MD_DataIdentification>
+                    <gmd:citation>
+                        <gmd:CI_Citation>
+                            <gmd:title>
+                                <gco:CharacterString>RGIS Published PRISM Precipitation WCS Dataset</gco:CharacterString>
+                            </gmd:title>
+                            <gmd:date>
+                                <gmd:CI_Date>
+                                    <gmd:date>
+                                        <gco:Date>2013-05-09</gco:Date>
+                                    </gmd:date>
+                                    <gmd:dateType>
+                                        <gmd:CI_DateTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_DateTypeCode" codeListValue="publication">publication</gmd:CI_DateTypeCode>
+                                    </gmd:dateType>
+                                </gmd:CI_Date>
+                            </gmd:date>
+                            <gmd:identifier>
+                                <gmd:MD_Identifier>
+                                    <gmd:code>
+                                        <gco:CharacterString>Downloadable Data</gco:CharacterString>
+                                    </gmd:code>
+                                </gmd:MD_Identifier>
+                            </gmd:identifier>
+                            <gmd:citedResponsibleParty>
+                                <gmd:CI_ResponsibleParty>
+                                    <gmd:organisationName>
+                                        <gco:CharacterString>EDAC</gco:CharacterString>
+                                    </gmd:organisationName>
+                                    <gmd:contactInfo>
+                                        <gmd:CI_Contact>
+                                            <gmd:address>
+                                                <gmd:CI_Address>
+                                                  <gmd:city>
+                                                    <gco:CharacterString></gco:CharacterString>
+                                                  </gmd:city>
+                                                  <gmd:administrativeArea>
+                                                    <gco:CharacterString></gco:CharacterString>
+                                                  </gmd:administrativeArea>
+                                                </gmd:CI_Address>
+                                            </gmd:address>
+                                        </gmd:CI_Contact>
+                                    </gmd:contactInfo>
+                                    <gmd:role>
+                                        <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="publisher">publisher</gmd:CI_RoleCode>
+                                    </gmd:role>
+                                </gmd:CI_ResponsibleParty>
+                            </gmd:citedResponsibleParty>
+                        </gmd:CI_Citation>
+                    </gmd:citation>
+                    <gmd:abstract>
+                        <gco:CharacterString>test iso ds to rdf xml for rdf transform</gco:CharacterString>
+                    </gmd:abstract>
+                    <gmd:purpose>
+                        <gco:CharacterString>none</gco:CharacterString>
+                    </gmd:purpose>
+                    <gmd:status>
+                        <gmd:MD_ProgressCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_ProgressCode" codeListValue="complete"/>
+                    </gmd:status>
+                    <gmd:pointOfContact>
+                        <gmd:CI_ResponsibleParty>
+                            <gmd:organisationName>
+                                <gco:CharacterString>edac</gco:CharacterString>
+                            </gmd:organisationName>
+                            <gmd:contactInfo>
+                                <gmd:CI_Contact>
+                                    <gmd:phone>
+                                        <gmd:CI_Telephone>
+                                            <gmd:voice>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:voice>
+                                            <gmd:facsimile>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:facsimile>
+                                        </gmd:CI_Telephone>
+                                    </gmd:phone>
+                                    <gmd:address>
+                                        <gmd:CI_Address>
+                                            <gmd:deliveryPoint>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:deliveryPoint>
+                                            <gmd:city>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:city>
+                                            <gmd:administrativeArea>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:administrativeArea>
+                                            <gmd:postalCode>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:postalCode>
+                                            <gmd:country>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:country>
+                                            <gmd:electronicMailAddress>
+                                                <gco:CharacterString></gco:CharacterString>
+                                            </gmd:electronicMailAddress>
+                                        </gmd:CI_Address>
+                                    </gmd:address>
+                                </gmd:CI_Contact>
+                            </gmd:contactInfo>
+                            <gmd:role>
+                                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="pointOfContact"/>
+                            </gmd:role>
+                        </gmd:CI_ResponsibleParty>
+                    </gmd:pointOfContact>
+                    <gmd:resourceMaintenance>
+                        <gmd:MD_MaintenanceInformation>
+                            <gmd:maintenanceAndUpdateFrequency>
+                                <gmd:MD_MaintenanceFrequencyCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_MaintenanceFrequencyCode" codeListValue="unknown"/>
+                            </gmd:maintenanceAndUpdateFrequency>
+                        </gmd:MD_MaintenanceInformation>
+                    </gmd:resourceMaintenance>
+                    <gmd:descriptiveKeywords>
+                        <gmd:MD_Keywords>
+                            <gmd:keyword>
+                                <gco:CharacterString>Precipitation</gco:CharacterString>
+                            </gmd:keyword>
+                            <gmd:type>
+                                <gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="theme"/>
+                            </gmd:type>
+                            <gmd:thesaurusName>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                        <gco:CharacterString>OBOE</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:date gco:nilReason="unknown"/>
+                                </gmd:CI_Citation>
+                            </gmd:thesaurusName>
+                        </gmd:MD_Keywords>
+                    </gmd:descriptiveKeywords>
+                    <gmd:descriptiveKeywords>
+                        <gmd:MD_Keywords>
+                            <gmd:keyword>
+                                <gco:CharacterString>United States</gco:CharacterString>
+                            </gmd:keyword>
+                            <gmd:type>
+                                <gmd:MD_KeywordTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_KeywordTypeCode" codeListValue="place"/>
+                            </gmd:type>
+                            <gmd:thesaurusName>
+                                <gmd:CI_Citation>
+                                    <gmd:title>
+                                        <gco:CharacterString>Geographic Names Information System</gco:CharacterString>
+                                    </gmd:title>
+                                    <gmd:date gco:nilReason="unknown"/>
+                                </gmd:CI_Citation>
+                            </gmd:thesaurusName>
+                        </gmd:MD_Keywords>
+                    </gmd:descriptiveKeywords>
+                    <gmd:spatialRepresentationType>
+                        <gmd:MD_SpatialRepresentationTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="grid"/>
+                    </gmd:spatialRepresentationType>
+                    <gmd:language>
+                        <gco:CharacterString>eng; USA</gco:CharacterString>
+                    </gmd:language>
+                    <gmd:extent>
+                        <gmd:EX_Extent id="boundingExtent">
+                            <gmd:geographicElement>
+                                <gmd:EX_GeographicBoundingBox id="geographicExtent_input4457">
+                                    <gmd:westBoundLongitude>
+                                        <gco:Decimal>-125.020679</gco:Decimal>
+                                    </gmd:westBoundLongitude>
+                                    <gmd:eastBoundLongitude>
+                                        <gco:Decimal>-66.479012</gco:Decimal>
+                                    </gmd:eastBoundLongitude>
+                                    <gmd:southBoundLatitude>
+                                        <gco:Decimal>24.062530</gco:Decimal>
+                                    </gmd:southBoundLatitude>
+                                    <gmd:northBoundLatitude>
+                                        <gco:Decimal>49.937530</gco:Decimal>
+                                    </gmd:northBoundLatitude>
+                                </gmd:EX_GeographicBoundingBox>
+                            </gmd:geographicElement>
+                            <gmd:temporalElement>
+                                <gmd:EX_TemporalExtent>
+                                    <gmd:extent>
+                                        <gml:TimePeriod gml:id="d1e42_input4567">
+                                            <gml:description>ground condition</gml:description>
+                                            <gml:beginPosition>2002-03-01</gml:beginPosition>
+                                            <gml:endPosition>2002-03-31</gml:endPosition>
+                                        </gml:TimePeriod>
+                                    </gmd:extent>
+                                </gmd:EX_TemporalExtent>
+                            </gmd:temporalElement>
+                        </gmd:EX_Extent>
+                    </gmd:extent>
+                </gmd:MD_DataIdentification>
+            </gmd:identificationInfo>
+            <gmd:contentInfo>
+                <gmd:MD_CoverageDescription>
+                    <gmd:attributeDescription>
+                        <gco:RecordType/>
+                    </gmd:attributeDescription>
+                    <gmd:contentType>
+                        <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                            codeListValue="physicalMeasurement"/>
+                    </gmd:contentType>
+                    <gmd:dimension>
+                        <gmd:MD_Band>
+                            <gmd:descriptor/>
+                            <gmd:units>
+                                <gml:UnitDefinition gml:id="d539">
+                                    <gml:identifier codeSpace=""/>
+                                    <gml:name>millimeters</gml:name>
+                                </gml:UnitDefinition>
+                            </gmd:units>
+                        </gmd:MD_Band>
+                    </gmd:dimension>
+                </gmd:MD_CoverageDescription>
+            </gmd:contentInfo>
+            <gmd:dataQualityInfo>
+                <gmd:DQ_DataQuality>
+                    <gmd:scope gco:nilReason="unknown"/>
+                    
+                    <gmd:lineage>
+                        <gmd:LI_Lineage>
+                            <gmd:processStep>
+                                <gmi:LE_ProcessStep id="download-1">
+                                    <gmd:description>
+                                        <gco:CharacterString>[Download] | Download HDF from nasa</gco:CharacterString>
+                                    </gmd:description>
+                                    <gmd:dateTime>
+                                        <gco:DateTime>2013-12-12T00:00:00</gco:DateTime>
+                                    </gmd:dateTime>
+                                    <gmd:source xlink:role="#OSU-PRISM-ASCII">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Used</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>the prism ascii link</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmd:source xlink:role="#LOCAL-PRISM-ASCII">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Produced</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>the downloaded ascii</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmi:processingInformation>
+                                        <gmi:LE_Processing>
+                                            <gmi:identifier/>
+                                            <gmi:softwareReference>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>curl</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmi:softwareReference>
+                                        </gmi:LE_Processing>
+                                    </gmi:processingInformation>
+                                </gmi:LE_ProcessStep>
+                            </gmd:processStep>
+                            
+                            <gmd:processStep>
+                                <gmi:LE_ProcessStep id="convert-to-geotiff-1">
+                                    <gmd:description>
+                                        <gco:CharacterString>[ConvertASCIIToTIFF] | Convert the ascii to a geotiff</gco:CharacterString>
+                                    </gmd:description>
+                                    <gmd:dateTime>
+                                        <gco:DateTime>2013-12-12T04:00:00</gco:DateTime>
+                                    </gmd:dateTime>
+                                    <gmd:source xlink:role="#LOCAL-PRISM-ASCII">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Used</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>the local ascii</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmd:source xlink:role="#LOCAL-PRISM-TIFF">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Produced</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>the converted tiff</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmi:processingInformation>
+                                        <gmi:LE_Processing>
+                                            <gmi:identifier/>
+                                            <gmi:softwareReference>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>gdal_translate</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmi:softwareReference>
+                                        </gmi:LE_Processing>
+                                    </gmi:processingInformation>
+                                </gmi:LE_ProcessStep>
+                            </gmd:processStep>
+                            
+                            <gmd:processStep>
+                                <gmi:LE_ProcessStep id="reproject-1">
+                                    <gmd:description>
+                                        <gco:CharacterString>[Reproject] | Reproject to WGS 84</gco:CharacterString>
+                                    </gmd:description>
+                                    <gmd:dateTime>
+                                        <gco:DateTime>2013-12-12T04:00:00</gco:DateTime>
+                                    </gmd:dateTime>
+                                    <gmd:source xlink:role="#LOCAL-PRISM-TIFF">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Used</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>the local tiff</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmd:source xlink:role="#LOCAL-PRISM-TIFF-WGS84">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Produced</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>the reprojected tiff</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmi:processingInformation>
+                                        <gmi:LE_Processing>
+                                            <gmi:identifier/>
+                                            <gmi:softwareReference>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>gdalwarp</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmi:softwareReference>
+                                        </gmi:LE_Processing>
+                                    </gmi:processingInformation>
+                                </gmi:LE_ProcessStep>
+                            </gmd:processStep>
+                            <gmd:processStep>
+                                <gmi:LE_ProcessStep id="publish-1">
+                                    <gmd:description>
+                                        <gco:CharacterString>[PUBLISH] | Publish the evi dataset as gstore wcs.</gco:CharacterString>
+                                    </gmd:description>
+                                    <gmd:dateTime>
+                                        <gco:DateTime>2013-12-12T13:00:00</gco:DateTime>
+                                    </gmd:dateTime>
+                                    <gmd:source xlink:role="#LOCAL-PRISM-TIFF-WGS84">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                  <gmd:title>
+                                                  <gco:CharacterString>Source Used</gco:CharacterString>
+                                                  </gmd:title>
+                                                  <gmd:alternateTitle>
+                                                  <gco:CharacterString>Reprojected GeoTIFF</gco:CharacterString>
+                                                  </gmd:alternateTitle>
+                                                  <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmi:processingInformation>
+                                        <gmi:LE_Processing>
+                                            <gmi:identifier/>
+                                            <gmi:softwareReference>
+                                                <gmd:CI_Citation>
+                                                  <gmd:title>
+                                                  <gco:CharacterString>GSTORE</gco:CharacterString>
+                                                  </gmd:title>
+                                                  <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmi:softwareReference>
+                                        </gmi:LE_Processing>
+                                    </gmi:processingInformation>
+                                </gmi:LE_ProcessStep>
+                            </gmd:processStep>
+                        </gmd:LI_Lineage>
+                    </gmd:lineage>
+                </gmd:DQ_DataQuality>
+            </gmd:dataQualityInfo>
+            <gmd:metadataMaintenance>
+                <gmd:MD_MaintenanceInformation>
+                    <gmd:maintenanceAndUpdateFrequency gco:nilReason="unknown"/>
+                    <gmd:contact>
+                        <gmd:CI_ResponsibleParty>
+                            <gmd:organisationName>
+                                <gco:CharacterString>Earth Data Analysis Center</gco:CharacterString>
+                            </gmd:organisationName>
+                            <gmd:positionName>
+                                <gco:CharacterString>Clearinghouse Manager</gco:CharacterString>
+                            </gmd:positionName>
+                            <gmd:contactInfo>
+                                <gmd:CI_Contact>
+                                    <gmd:phone>
+                                        <gmd:CI_Telephone>
+                                            <gmd:voice>
+                                                <gco:CharacterString>505-277-3622 ext. 230</gco:CharacterString>
+                                            </gmd:voice>
+                                            <gmd:facsimile>
+                                                <gco:CharacterString>505-277-3614</gco:CharacterString>
+                                            </gmd:facsimile>
+                                        </gmd:CI_Telephone>
+                                    </gmd:phone>
+                                    <gmd:address>
+                                        <gmd:CI_Address>
+                                            <gmd:deliveryPoint>
+                                                <gco:CharacterString>MSC01 1110</gco:CharacterString>
+                                            </gmd:deliveryPoint>
+                                            <gmd:deliveryPoint>
+                                                <gco:CharacterString>1 University of New Mexico</gco:CharacterString>
+                                            </gmd:deliveryPoint>
+                                            <gmd:city>
+                                                <gco:CharacterString>Albuquerque</gco:CharacterString>
+                                            </gmd:city>
+                                            <gmd:administrativeArea>
+                                                <gco:CharacterString>NM</gco:CharacterString>
+                                            </gmd:administrativeArea>
+                                            <gmd:postalCode>
+                                                <gco:CharacterString>87131-0001</gco:CharacterString>
+                                            </gmd:postalCode>
+                                            <gmd:country>
+                                                <gco:CharacterString>USA</gco:CharacterString>
+                                            </gmd:country>
+                                            <gmd:electronicMailAddress>
+                                                <gco:CharacterString>clearinghouse@edac.unm.edu</gco:CharacterString>
+                                            </gmd:electronicMailAddress>
+                                        </gmd:CI_Address>
+                                    </gmd:address>
+                                    <gmd:hoursOfService>
+                                        <gco:CharacterString>0800 - 1700 MT, M-F -7 hours GMT</gco:CharacterString>
+                                    </gmd:hoursOfService>
+                                </gmd:CI_Contact>
+                            </gmd:contactInfo>
+                            <gmd:role>
+                                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="custodian">custodian</gmd:CI_RoleCode>
+                            </gmd:role>
+                        </gmd:CI_ResponsibleParty>
+                    </gmd:contact>
+                </gmd:MD_MaintenanceInformation>
+            </gmd:metadataMaintenance>
+        </gmi:MI_Metadata>
+    </gmd:seriesMetadata>
+</gmd:DS_Series>

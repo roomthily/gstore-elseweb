@@ -113,7 +113,13 @@
       <rdf:type rdf:type="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Dataset"/>
       <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/duration-42caae77-7536-4423-bdc1-5d42b6635d4a"/>
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-42caae77-7536-4423-bdc1-5d42b6635d4a"/>
-      <elseweb-edac:wasPublishedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/publish-42caae77-7536-4423-bdc1-5d42b6635d4a"/>
+      <!--
+                    let us now assume things.
+                    
+                    namely, that the last process step generates the data object of the series metadata. (this is not 
+                    the worst assumption.)
+                -->
+      <elseweb-edac:wasPublishedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/publish-1"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-42caae77-7536-4423-bdc1-5d42b6635d4a"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/wcs-modis-manifestion-42caae77-7536-4423-bdc1-5d42b6635d4a"/>
    </owl:NamedIndividual>
@@ -607,7 +613,7 @@
       <elseweb-edac:hadInput rdf:resource="LOCAL-TIFF-2"/>
       <elseweb-edac:hadInput rdf:resource="LOCAL-TIFF-1"/>
    </owl:NamedIndividual>
-   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/">
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/publish-1">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#PUBLISH"/>
       <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/GSTORE"/>
       <elseweb-edac:hadInput rdf:resource="MOSAICKED"/>

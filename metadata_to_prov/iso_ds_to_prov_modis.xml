@@ -2185,7 +2185,7 @@
                                 </gmi:LE_ProcessStep>
                             </gmd:processStep>
                             <gmd:processStep>
-                                <gmi:LE_ProcessStep>
+                                <gmi:LE_ProcessStep id="publish-1">
                                     <gmd:description>
                                         <gco:CharacterString>[PUBLISH] | Publish the evi dataset as gstore wcs.</gco:CharacterString>
                                     </gmd:description>
