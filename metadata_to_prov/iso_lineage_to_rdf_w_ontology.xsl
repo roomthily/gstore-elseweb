@@ -178,7 +178,7 @@
             <owl:Class rdf:about="{concat($schema-base-edac, '#Vegetation')}"/>
             
             <xsl:comment>
-                <!-- individuals -->
+                individuals
             </xsl:comment>
             
             <!-- what is this date? -->
@@ -307,7 +307,7 @@
                 
                 <xsl:variable name="generated-by">
                     <!-- i.e. is it in a step with "Source Produced" -->
-                    <xsl:value-of select="$all-steps/LE_ProcessStep[source/@role=concat('#', $source-id) and source/LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']/@id"/>
+                    <xsl:value-of select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and source/LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/@id"/>
                 </xsl:variable>
                 
                 <!-- check for a band identifier -->
