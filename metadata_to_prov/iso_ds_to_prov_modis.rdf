@@ -278,7 +278,7 @@
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-LOCAL-HDF-1"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-LOCAL-HDF-1"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-HDF-1"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/download-1"/>
       <elseweb-edac:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/band-LOCAL-HDF-1"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-HDF-1">
@@ -330,7 +330,7 @@
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-LOCAL-HDF-2"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-LOCAL-HDF-2"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-HDF-2"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/download-2"/>
       <elseweb-edac:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/band-LOCAL-HDF-2"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-HDF-2">
@@ -382,7 +382,7 @@
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-LOCAL-HDF-3"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-LOCAL-HDF-3"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-HDF-3"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/download-3"/>
       <elseweb-edac:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/band-LOCAL-HDF-3"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-HDF-3">
@@ -434,7 +434,7 @@
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-LOCAL-TIFF-1"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-LOCAL-TIFF-1"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-TIFF-1"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/extract-reproject-1"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-TIFF-1">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
@@ -470,7 +470,7 @@
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-LOCAL-TIFF-2"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-LOCAL-TIFF-2"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-TIFF-2"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/extract-reproject-2"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-TIFF-2">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
@@ -506,7 +506,7 @@
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-LOCAL-TIFF-3"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-LOCAL-TIFF-3"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-TIFF-3"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/extract-reproject-3"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-LOCAL-TIFF-3">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
@@ -542,7 +542,7 @@
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/projection-MOSAICKED"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/region-MOSAICKED"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-MOSAICKED"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/mosaic-1"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/instance/manifestion-MOSAICKED">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>

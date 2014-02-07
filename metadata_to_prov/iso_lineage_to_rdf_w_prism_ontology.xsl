@@ -313,7 +313,7 @@
                 
                 <xsl:variable name="generated-by">
                     <!-- i.e. is it in a step with "Source Produced" -->
-                    <xsl:value-of select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and source/LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/@id"/>
+                    <xsl:value-of select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/@id"/>
                 </xsl:variable>
                 
                 <!-- check for a band identifier -->
