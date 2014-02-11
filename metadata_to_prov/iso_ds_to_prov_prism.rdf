@@ -67,7 +67,7 @@
 <<<<<<< HEAD
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#getJSONCapabilitiesDigestURL"/>
 =======
-   <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owlgetJSONCapabilitiesDigestURL"/>
+   <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#getJSONCapabilitiesDigestURL"/>
 >>>>>>> 70986b189105fcdb812cc670ce83928c8d821ce3
    <!--
 

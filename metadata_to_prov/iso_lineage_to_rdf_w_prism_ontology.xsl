@@ -133,7 +133,7 @@
 <<<<<<< HEAD
             <owl:DatatypeProperty rdf:about="{concat($schema-base-edac, '#getJSONCapabilitiesDigestURL')}"/>
 =======
-            <owl:DatatypeProperty rdf:about="{concat($schema-base-edac, 'getJSONCapabilitiesDigestURL')}"/>
+            <owl:DatatypeProperty rdf:about="{concat($schema-base-edac, '#getJSONCapabilitiesDigestURL')}"/>
 >>>>>>> 70986b189105fcdb812cc670ce83928c8d821ce3
             
             <xsl:comment>
