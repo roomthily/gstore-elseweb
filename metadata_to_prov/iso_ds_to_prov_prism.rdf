@@ -64,6 +64,7 @@
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLowerLatitude"/>
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasRightLongitude"/>
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUpperLatitude"/>
+   <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owlgetJSONCapabilitiesDigestURL"/>
    <!--
 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -112,7 +113,7 @@
    </owl:NamedIndividual>
    <!--wcs prism dataset-->
    <owl:NamedIndividual rdf:about="4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
-      <rdf:type rdf:type="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Dataset"/>
+      <rdf:type rdf:type="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#PublishedPRISMDataset"/>
       <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/duration-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/projection-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
       <!--
@@ -125,6 +126,7 @@
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/region-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
       <elseweb-data:hasUnits rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
+      <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
    </owl:NamedIndividual>
    <!--the wcs-->
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/duration-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
@@ -146,6 +148,23 @@
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
       <rdf:type rdf:type="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSManifestation"/>
       <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://gstore.unm.edu/apps/epscor/datasets/4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2</elseweb-data:hasCapabilitiesDocumentURL>
+      <elseweb-edac:getJSONCapabilitiesDigestURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://gstore.unm.edu/apps/epscor/datasets/4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707/services.json</elseweb-edac:getJSONCapabilitiesDigestURL>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+      <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
+      <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
+      <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#BandIdentification"/>
+      <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">OutputBand</elseweb-data:hasBandName>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Precipitation"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Amount"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Units"/>
@@ -163,18 +182,34 @@
                 all of the entities
             -->
    <owl:NamedIndividual rdf:about="OSU-PRISM-ASCII">
-      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Dataset"/>
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#PRISMDataset"/>
       <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/duration-OSU-PRISM-ASCII"/>
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/projection-OSU-PRISM-ASCII"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/region-OSU-PRISM-ASCII"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-OSU-PRISM-ASCII"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/download-1"/>
       <elseweb-edac:hasUnits rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-OSU-PRISM-ASCII"/>
+      <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-OSU-PRISM-ASCII"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-OSU-PRISM-ASCII">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
       <elseweb-data:hasFileDownloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://www.prism.oregonstate.edu/PRISM_ppt_stable_4kmM2_201301_asc.asc</elseweb-data:hasFileDownloadURL>
       <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ASCII"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-OSU-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+      <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-OSU-PRISM-ASCII"/>
+      <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-OSU-PRISM-ASCII"/>
+      <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-OSU-PRISM-ASCII"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-OSU-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#BandIdentification"/>
+      <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleBand</elseweb-data:hasBandName>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-OSU-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Precipitation"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-OSU-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Amount"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-OSU-PRISM-ASCII">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Units"/>
@@ -211,17 +246,34 @@
       <elseweb-data:hasEPSGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4269</elseweb-data:hasEPSGCode>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="LOCAL-PRISM-ASCII">
-      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Dataset"/>
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DownloadedPRISMDataset"/>
       <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/duration-LOCAL-PRISM-ASCII"/>
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/projection-LOCAL-PRISM-ASCII"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/region-LOCAL-PRISM-ASCII"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-LOCAL-PRISM-ASCII"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/download-1 convert-to-geotiff-1"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/download-1"/>
       <elseweb-edac:hasUnits rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-LOCAL-PRISM-ASCII"/>
+      <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-LOCAL-PRISM-ASCII"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-LOCAL-PRISM-ASCII">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
       <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#ASCII"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-LOCAL-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+      <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-LOCAL-PRISM-ASCII"/>
+      <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-LOCAL-PRISM-ASCII"/>
+      <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-LOCAL-PRISM-ASCII"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-LOCAL-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#BandIdentification"/>
+      <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleBand</elseweb-data:hasBandName>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-LOCAL-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Precipitation"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-LOCAL-PRISM-ASCII">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Amount"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-LOCAL-PRISM-ASCII">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Units"/>
@@ -258,17 +310,34 @@
       <elseweb-data:hasEPSGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4269</elseweb-data:hasEPSGCode>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="LOCAL-PRISM-TIFF">
-      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Dataset"/>
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ConvertedDataset"/>
       <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/duration-LOCAL-PRISM-TIFF"/>
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/projection-LOCAL-PRISM-TIFF"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/region-LOCAL-PRISM-TIFF"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-LOCAL-PRISM-TIFF"/>
-      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/convert-to-geotiff-1 reproject-1"/>
+      <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/convert-to-geotiff-1"/>
       <elseweb-edac:hasUnits rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-LOCAL-PRISM-TIFF"/>
+      <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-LOCAL-PRISM-TIFF"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-LOCAL-PRISM-TIFF">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
       <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeoTIFF"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-LOCAL-PRISM-TIFF">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+      <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-LOCAL-PRISM-TIFF"/>
+      <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-LOCAL-PRISM-TIFF"/>
+      <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-LOCAL-PRISM-TIFF"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-LOCAL-PRISM-TIFF">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#BandIdentification"/>
+      <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleBand</elseweb-data:hasBandName>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-LOCAL-PRISM-TIFF">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Precipitation"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-LOCAL-PRISM-TIFF">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Amount"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-LOCAL-PRISM-TIFF">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Units"/>
@@ -305,17 +374,34 @@
       <elseweb-data:hasEPSGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4269</elseweb-data:hasEPSGCode>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="LOCAL-PRISM-TIFF-WGS84">
-      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Dataset"/>
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ReprojectedDataset"/>
       <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/duration-LOCAL-PRISM-TIFF-WGS84"/>
       <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/projection-LOCAL-PRISM-TIFF-WGS84"/>
       <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/region-LOCAL-PRISM-TIFF-WGS84"/>
       <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-LOCAL-PRISM-TIFF-WGS84"/>
       <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/reproject-1"/>
       <elseweb-edac:hasUnits rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-LOCAL-PRISM-TIFF-WGS84"/>
+      <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-LOCAL-PRISM-TIFF-WGS84"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-LOCAL-PRISM-TIFF-WGS84">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
       <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#GeoTIFF"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-LOCAL-PRISM-TIFF-WGS84">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+      <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-LOCAL-PRISM-TIFF-WGS84"/>
+      <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-LOCAL-PRISM-TIFF-WGS84"/>
+      <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-LOCAL-PRISM-TIFF-WGS84"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/bandid-LOCAL-PRISM-TIFF-WGS84">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#BandIdentification"/>
+      <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">SingleBand</elseweb-data:hasBandName>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/entity-LOCAL-PRISM-TIFF-WGS84">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Precipitation"/>
+   </owl:NamedIndividual>
+   <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/characteristic-LOCAL-PRISM-TIFF-WGS84">
+      <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Amount"/>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/units-LOCAL-PRISM-TIFF-WGS84">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Units"/>

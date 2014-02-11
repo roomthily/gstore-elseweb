@@ -172,7 +172,9 @@
                             </gmd:contentType>
                             <gmd:dimension>
                                 <gmd:MD_Band>
-                                    <gmd:descriptor/>
+                                    <gmd:descriptor>
+                                       <gco:CharacterString>SingleBand</gco:CharacterString> 
+                                    </gmd:descriptor>
                                     <gmd:units>
                                         <gml:UnitDefinition gml:id="d36">
                                             <gml:identifier codeSpace=""/>
@@ -330,7 +332,9 @@
                             </gmd:contentType>
                             <gmd:dimension>
                                 <gmd:MD_Band>
-                                    <gmd:descriptor/>
+                                    <gmd:descriptor>
+                                        <gco:CharacterString>SingleBand</gco:CharacterString> 
+                                    </gmd:descriptor>
                                     <gmd:units>
                                         <gml:UnitDefinition gml:id="d34">
                                             <gml:identifier codeSpace=""/>
@@ -488,7 +492,9 @@
                             </gmd:contentType>
                             <gmd:dimension>
                                 <gmd:MD_Band>
-                                    <gmd:descriptor/>
+                                    <gmd:descriptor>
+                                        <gco:CharacterString>SingleBand</gco:CharacterString> 
+                                    </gmd:descriptor>
                                     <gmd:units>
                                         <gml:UnitDefinition gml:id="d35">
                                             <gml:identifier codeSpace=""/>
@@ -645,7 +651,9 @@
                             </gmd:contentType>
                             <gmd:dimension>
                                 <gmd:MD_Band>
-                                    <gmd:descriptor/>
+                                    <gmd:descriptor>
+                                        <gco:CharacterString>SingleBand</gco:CharacterString> 
+                                    </gmd:descriptor>
                                     <gmd:units>
                                         <gml:UnitDefinition gml:id="d39">
                                             <gml:identifier codeSpace=""/>
@@ -661,7 +669,7 @@
         </gmd:DS_DataSet>
     </gmd:composedOf>
     <gmd:seriesMetadata>
-        <gmi:MI_Metadata>
+        <gmi:MI_Metadata id="SELF">
             <gmd:fileIdentifier>
                 <gco:CharacterString>RGIS::4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707::ISO-19115:2003</gco:CharacterString>
             </gmd:fileIdentifier>
@@ -976,7 +984,9 @@
                     </gmd:contentType>
                     <gmd:dimension>
                         <gmd:MD_Band>
-                            <gmd:descriptor/>
+                            <gmd:descriptor>
+                                <gco:CharacterString>OutputBand</gco:CharacterString> 
+                            </gmd:descriptor>
                             <gmd:units>
                                 <gml:UnitDefinition gml:id="d539">
                                     <gml:identifier codeSpace=""/>
@@ -1009,7 +1019,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>the prism ascii link</gco:CharacterString>
+                                                        <gco:CharacterString>[PRISMDataset] | download link for the prism</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1024,7 +1034,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>the downloaded ascii</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedPRISMDataset] | local copy of the downloaded ascii</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1063,7 +1073,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>the local ascii</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedPRISMDataset] | local copy of the downloaded ascii</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1078,7 +1088,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>the converted tiff</gco:CharacterString>
+                                                        <gco:CharacterString>[ConvertedDataset] | local ascii converted to geotiff</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1117,7 +1127,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>the local tiff</gco:CharacterString>
+                                                        <gco:CharacterString>[ConvertedDataset] | local ascii converted to geotiff</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1132,7 +1142,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>the reprojected tiff</gco:CharacterString>
+                                                        <gco:CharacterString>[ReprojectedDataset] | the reprojected tiff</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1167,12 +1177,27 @@
                                             <gmd:sourceCitation>
                                                 <gmd:CI_Citation>
                                                   <gmd:title>
-                                                  <gco:CharacterString>Source Used</gco:CharacterString>
+                                                    <gco:CharacterString>Source Used</gco:CharacterString>
                                                   </gmd:title>
                                                   <gmd:alternateTitle>
-                                                  <gco:CharacterString>Reprojected GeoTIFF</gco:CharacterString>
+                                                      <gco:CharacterString>[ReprojectedDataset] | the reprojected tiff</gco:CharacterString>
                                                   </gmd:alternateTitle>
                                                   <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmd:source xlink:role="#SELF">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Produced</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>[PublishedPRISMDataset] | the wcs service</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
                                             </gmd:sourceCitation>
                                         </gmd:LI_Source>
