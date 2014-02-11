@@ -130,7 +130,7 @@
             
             <owl:DatatypeProperty rdf:about="{concat($schema-base-data, '#hasUpperLatitude')}"/>
             
-            <owl:DatatypeProperty rdf:about="{concat($schema-base-edac, 'getJSONCapabilitiesDigestURL')}"/>
+            <owl:DatatypeProperty rdf:about="{concat($schema-base-edac, '#getJSONCapabilitiesDigestURL')}"/>
             
             <xsl:comment>
 
