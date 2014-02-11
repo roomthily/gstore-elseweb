@@ -64,11 +64,9 @@
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLowerLatitude"/>
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasRightLongitude"/>
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUpperLatitude"/>
-<<<<<<< HEAD
+
    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#getJSONCapabilitiesDigestURL"/>
-=======
-   <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#getJSONCapabilitiesDigestURL"/>
->>>>>>> 70986b189105fcdb812cc670ce83928c8d821ce3
+
    <!--
 
     ///////////////////////////////////////////////////////////////////////////////////////
