@@ -97,6 +97,11 @@
             
             <owl:ObjectProperty rdf:about="{concat($schema-base-edac, '#wasPublishedBy')}"/>
             
+            <!-- TODO: replace this with the correct UNITS element from N. -->
+            <xsl:comment>temporary solution for the units</xsl:comment>
+            <owl:ObjectProperty rdf:about="{concat($schema-base-edac, '#hasUnits')}"/>
+            <owl:ObjectProperty rdf:about="{concat($schema-base-edac, '#hasUnitName')}"/>
+            
             <xsl:comment>
 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -177,6 +182,12 @@
             
             <owl:Class rdf:about="{concat($schema-base-edac, '#Vegetation')}"/>
             
+            <owl:DatatypeProperty rdf:about="{concat($schema-base-edac, '#getJSONCapabilitiesDigestURL')}"/>
+            
+            <!-- TODO: replace this with the correct UNITS element from N. -->
+            <xsl:comment>temporary solution for the units</xsl:comment>
+            <owl:Class rdf:about="{concat($schema-base-edac, '#Units')}"/>
+            
             <xsl:comment>
                 individuals
             </xsl:comment>
@@ -200,21 +211,34 @@
             <xsl:comment>wcs modis dataset</xsl:comment>
             <!-- the final output file (wcs representation) -->
             <xsl:variable name="output-uri" select="$cleaned/DS_Series/seriesMetadata/MI_Metadata/dataSetURI/CharacterString"/>
+            
+            <!-- the last processing step -->
+            <xsl:variable name="last-step" select="$all-steps/LE_ProcessStep[source[@role = '#SELF' and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]"/>
+            
+            <!-- final object-type -->
+            <xsl:variable name="last-type">
+                <xsl:call-template name="get-identifier">
+                    <xsl:with-param name="text" select="$last-step/source[@role = '#SELF' and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']/LI_Source/sourceCitation/CI_Citation/alternateTitle/CharacterString"/>
+                </xsl:call-template>
+            </xsl:variable>
+            
+            <!-- output band -->
+            <xsl:variable name="output-band-identifier" select="$cleaned/DS_Series/seriesMetadata/MI_Metadata/contentInfo/MD_CoverageDescription/dimension/MD_Band/descriptor/CharacterString"/>
+            
             <owl:NamedIndividual rdf:about="{$output-uri}">
-                <rdf:type rdf:type="{fn:concat($schema-base-edac, '#Dataset')}"/>
+                <rdf:type rdf:type="{fn:concat($schema-base-edac, '#', $last-type)}"/>
                 <elseweb-data:coversTimePeriod rdf:resource="{fn:concat($instance, 'duration-', $output-uri)}"/>
                 <elseweb-data:hasGeospatialProjection rdf:resource="{fn:concat($instance, 'projection-', $output-uri)}"/>
-                <xsl:comment>
-                    let us now assume things.
-                    
-                    namely, that the last process step generates the data object of the series metadata. (this is not 
-                    the worst assumption.)
-                </xsl:comment>
                 <!-- so go get the last processing step and its id to use that -->
                 <elseweb-edac:wasPublishedBy rdf:resource="{fn:concat($instance, $all-steps[last()]/LE_ProcessStep/@id)}"/>
                 
                 <elseweb-data:coversRegion rdf:resource="{fn:concat($instance, 'region-', $output-uri)}"/>
+                <elseweb-data:hasUnits rdf:resource="{fn:concat($instance, 'units-', $output-uri)}"/>
                 <elseweb-data:hasManifestation rdf:resource="{fn:concat($instance, 'wcs-modis-manifestion-', $output-uri)}"/>
+                
+                <xsl:if test="$output-band-identifier">
+                    <elseweb-data:hasDataBand rdf:resource="{fn:concat($instance, 'band-', $output-uri)}"/>
+                </xsl:if>
             </owl:NamedIndividual>
             
             <xsl:comment>the wcs</xsl:comment>
@@ -257,6 +281,45 @@
                 <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
                     <xsl:value-of select="fn:concat('http://gstore.unm.edu/apps/epscor/datasets/', $output-uri, '/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2')"/>
                 </elseweb-data:hasCapabilitiesDocumentURL>
+                <elseweb-edac:GetJSONCapabilitiesDigest rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
+                    <xsl:value-of select="fn:concat('http://gstore.unm.edu/apps/epscor/datasets/', $output-uri, '/services.json')"/>
+                </elseweb-edac:GetJSONCapabilitiesDigest>
+            </owl:NamedIndividual>
+            
+            <!-- hasDataBand -->
+            <xsl:if test="$output-band-identifier">
+                <owl:NamedIndividual rdf:about="{fn:concat($instance, 'band-', $output-uri)}">
+                    <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#RGISDataBand')}"/>
+                    <elseweb-data:encodingOfCharacteristic rdf:resource="{fn:concat($instance, 'characteristic-', $output-uri)}"/>
+                    <elseweb-data:hasBandIdentification rdf:resource="{fn:concat($instance, 'bandid-', $output-uri)}"/>
+                    <elseweb-data:representsEntity rdf:resource="{fn:concat($instance, 'entity-', $output-uri)}"/>
+                </owl:NamedIndividual>
+                
+                <owl:NamedIndividual rdf:about="{fn:concat($instance, 'bandid-', $output-uri)}">
+                    <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#BandIdentification')}"/>
+                    <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                        <xsl:value-of select="$output-band-identifier"/>
+                    </elseweb-data:hasBandName>
+                </owl:NamedIndividual>
+                
+                <owl:NamedIndividual rdf:about="{fn:concat($instance, 'entity-', $output-uri)}">
+                    <xsl:variable name="entity-type" select="$cleaned/DS_Series/seriesMetadata/MI_Metadata/identificationInfo/MD_DataIdentification/descriptiveKeywords/MD_Keywords[thesaurusName/CI_Citation/title/CharacterString = 'OBOE']/keyword[1]/CharacterString"/>
+                    <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#', $entity-type)}"/>
+                </owl:NamedIndividual>
+                
+                <!-- punting to some default? -->
+                <owl:NamedIndividual rdf:about="{fn:concat($instance, 'characteristic-', $output-uri)}">
+                    <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index"/>
+                </owl:NamedIndividual>
+            </xsl:if>
+            
+            <!-- the units -->
+            
+            <owl:NamedIndividual rdf:about="{fn:concat($instance, 'units-', $output-uri)}">
+                <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#Units')}"/>
+                <elseweb-data:hasUnitName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">
+                    <xsl:value-of select="$cleaned/DS_Series/seriesMetadata/MI_Metadata/contentInfo/MD_CoverageDescription/dimension/MD_Band/units/UnitDefinition/name"/>
+                </elseweb-data:hasUnitName>
             </owl:NamedIndividual>
             
             <!-- the wcs modis date range -->
@@ -313,6 +376,33 @@
                 <!-- check for a band identifier -->
                 <xsl:variable name="band-identifier" select="contentInfo/MD_CoverageDescription/dimension/MD_Band/descriptor/CharacterString"/>
                 
+                <!-- and the units -->
+                <xsl:variable name="units-identifier" select="contentInfo/MD_CoverageDescription/dimension/MD_Band/units/UnitDefinition/name"/>
+                
+                <!-- get the type of object from the alternative name string -->
+                <xsl:variable name="object-type">
+                    <xsl:choose>
+                        <!-- produced by some intermediate step -->
+                        <xsl:when test="$generated-by != ''">
+                            <xsl:call-template name="get-identifier">
+                                <xsl:with-param name="text" select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']/LI_Source/sourceCitation/CI_Citation/alternateTitle/CharacterString"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        
+                        <!-- not produced by a step, but used by a step (i.e. and initial object) -->
+                        <xsl:when test="$generated-by = '' and $all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']]">
+                            <xsl:call-template name="get-identifier">
+                                <xsl:with-param name="text" select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']]/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']/LI_Source/sourceCitation/CI_Citation/alternateTitle/CharacterString"/>
+                            </xsl:call-template>
+                        </xsl:when>
+                        
+                        <!-- no idea where it came from but we need something -->
+                        <xsl:otherwise>
+                            <xsl:value-of select="'Dataset'"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:variable>
+                
                 <owl:NamedIndividual rdf:about="{@id}">
                     <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#Dataset')}"/>
                     <elseweb-data:coversTimePeriod rdf:resource="{fn:concat($instance, 'duration-', $source-id)}"/>
@@ -323,8 +413,12 @@
                         <elseweb-data:hasManifestation rdf:resource="{fn:concat($instance, 'manifestion-', $source-id)}"/>
                     </xsl:if>
                     
-                    <xsl:if test="$generated-by">
+                    <xsl:if test="$generated-by != ''">
                         <elseweb-edac:wasOutputBy rdf:resource="{fn:concat($instance, $generated-by)}"/>
+                    </xsl:if>
+                    
+                    <xsl:if test="$units-identifier">
+                        <elseweb-edac:hasUnits rdf:resource="{fn:concat($instance, 'units-', $source-id)}"/>
                     </xsl:if>
                     
                     <xsl:if test="$band-identifier">
@@ -351,6 +445,7 @@
                 <xsl:if test="$band-identifier">
                     <owl:NamedIndividual rdf:about="{fn:concat($instance, 'band-', $source-id)}">
                         <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#DataBand')}"/>
+                        <elseweb-data:encodingOfCharacteristic rdf:resource="{fn:concat($instance, 'characteristic-', $source-id)}"/>
                         <elseweb-data:hasBandIdentification rdf:resource="{fn:concat($instance, 'bandid-', $source-id)}"/>
                         <elseweb-data:representsEntity rdf:resource="{fn:concat($instance, 'entity-', $source-id)}"/>
                     </owl:NamedIndividual>
@@ -368,6 +463,11 @@
                     <owl:NamedIndividual rdf:about="{fn:concat($instance, 'entity-', $source-id)}">
                         <xsl:variable name="entity-type" select="identificationInfo/MD_DataIdentification/descriptiveKeywords/MD_Keywords[thesaurusName/CI_Citation/title/CharacterString = 'OBOE']/keyword[1]/CharacterString"/>
                         <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#', $entity-type)}"/>
+                    </owl:NamedIndividual>
+                    
+                    <!-- punting to some default? -->
+                    <owl:NamedIndividual rdf:about="{fn:concat($instance, 'characteristic-', $source-id)}">
+                        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index"/>
                     </owl:NamedIndividual>
                 </xsl:if>
                 
@@ -427,7 +527,7 @@
                 <owl:NamedIndividual rdf:about="{fn:concat($instance, LE_ProcessStep/@id)}">
                     <!-- get the thing from the other thing -->
                     <xsl:variable name="step-name">
-                        <xsl:call-template name="get-activity">
+                        <xsl:call-template name="get-identifier">
                             <xsl:with-param name="text" select="LE_ProcessStep/description/CharacterString"/>
                         </xsl:call-template>
                     </xsl:variable>
@@ -451,7 +551,7 @@
         </rdf:RDF>
     </xsl:template>
     
-    <xsl:template name="get-activity">
+    <xsl:template name="get-identifier">
         <xsl:param name="text" select="()"/>
         <!-- split the processing step text at the | to get the [NAME] -->
         <xsl:value-of select="fn:replace(fn:replace(fn:normalize-space(fn:substring-before($text, '|')), '\[', ''), '\]', '')"/>

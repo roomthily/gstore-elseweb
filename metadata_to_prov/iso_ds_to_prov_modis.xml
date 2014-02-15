@@ -115,12 +115,12 @@
                             <gmd:descriptiveKeywords>
                                 <gmd:MD_Keywords>
                                     <gmd:keyword>
-                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                        <gco:CharacterString>Vegetation</gco:CharacterString>
                                     </gmd:keyword>
                                     <gmd:thesaurusName>
                                         <gmd:CI_Citation>
                                             <gmd:title>
-                                                <gco:CharacterString>CF</gco:CharacterString>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
                                             </gmd:title>
                                             <gmd:date></gmd:date>
                                         </gmd:CI_Citation>
@@ -268,12 +268,12 @@
                         <gmd:descriptiveKeywords>
                             <gmd:MD_Keywords>
                                 <gmd:keyword>
-                                    <gco:CharacterString>Precipitation</gco:CharacterString>
+                                    <gco:CharacterString>Vegetation</gco:CharacterString>
                                 </gmd:keyword>
                                 <gmd:thesaurusName>
                                     <gmd:CI_Citation>
                                         <gmd:title>
-                                            <gco:CharacterString>CF</gco:CharacterString>
+                                            <gco:CharacterString>OBOE</gco:CharacterString>
                                         </gmd:title>
                                         <gmd:date></gmd:date>
                                     </gmd:CI_Citation>
@@ -421,12 +421,12 @@
                             <gmd:descriptiveKeywords>
                                 <gmd:MD_Keywords>
                                     <gmd:keyword>
-                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                        <gco:CharacterString>Vegetation</gco:CharacterString>
                                     </gmd:keyword>
                                     <gmd:thesaurusName>
                                         <gmd:CI_Citation>
                                             <gmd:title>
-                                                <gco:CharacterString>CF</gco:CharacterString>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
                                             </gmd:title>
                                             <gmd:date></gmd:date>
                                         </gmd:CI_Citation>
@@ -615,8 +615,14 @@
                             <gmd:dimension>
                                 <gmd:MD_Band>
                                     <gmd:descriptor>
-                                        <gco:CharacterString>MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</gco:CharacterString>
+                                        <gco:CharacterString>MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</gco:CharacterString> 
                                     </gmd:descriptor>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d36">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>unitless</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
                                 </gmd:MD_Band>
                             </gmd:dimension>
                         </gmd:MD_CoverageDescription>
@@ -767,8 +773,14 @@
                             <gmd:dimension>
                                 <gmd:MD_Band>
                                     <gmd:descriptor>
-                                        <gco:CharacterString>MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</gco:CharacterString>
+                                        <gco:CharacterString>MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</gco:CharacterString> 
                                     </gmd:descriptor>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d3786">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>unitless</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
                                 </gmd:MD_Band>
                             </gmd:dimension>
                         </gmd:MD_CoverageDescription>
@@ -919,8 +931,14 @@
                             <gmd:dimension>
                                 <gmd:MD_Band>
                                     <gmd:descriptor>
-                                        <gco:CharacterString>MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</gco:CharacterString>
+                                        <gco:CharacterString>MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</gco:CharacterString> 
                                     </gmd:descriptor>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d3656">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>unitless</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
                                 </gmd:MD_Band>
                             </gmd:dimension>
                         </gmd:MD_CoverageDescription>
@@ -1015,12 +1033,12 @@
                             <gmd:descriptiveKeywords>
                                 <gmd:MD_Keywords>
                                     <gmd:keyword>
-                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                        <gco:CharacterString>Vegetation</gco:CharacterString>
                                     </gmd:keyword>
                                     <gmd:thesaurusName>
                                         <gmd:CI_Citation>
                                             <gmd:title>
-                                                <gco:CharacterString>CF</gco:CharacterString>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
                                             </gmd:title>
                                             <gmd:date></gmd:date>
                                         </gmd:CI_Citation>
@@ -1061,6 +1079,30 @@
                             </gmd:extent>
                         </gmd:MD_DataIdentification>
                     </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor>
+                                        <gco:CharacterString>EVI</gco:CharacterString> 
+                                    </gmd:descriptor>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d36796">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>unitless</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
                 </gmd:MD_Metadata>
             </gmd:has>
             <gmd:has>
@@ -1149,12 +1191,12 @@
                             <gmd:descriptiveKeywords>
                                 <gmd:MD_Keywords>
                                     <gmd:keyword>
-                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                        <gco:CharacterString>Vegetation</gco:CharacterString>
                                     </gmd:keyword>
                                     <gmd:thesaurusName>
                                         <gmd:CI_Citation>
                                             <gmd:title>
-                                                <gco:CharacterString>CF</gco:CharacterString>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
                                             </gmd:title>
                                             <gmd:date></gmd:date>
                                         </gmd:CI_Citation>
@@ -1195,6 +1237,30 @@
                             </gmd:extent>
                         </gmd:MD_DataIdentification>
                     </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor>
+                                        <gco:CharacterString>EVI</gco:CharacterString> 
+                                    </gmd:descriptor>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d367966">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>unitless</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
                 </gmd:MD_Metadata>
             </gmd:has>
             <gmd:has>
@@ -1283,12 +1349,12 @@
                             <gmd:descriptiveKeywords>
                                 <gmd:MD_Keywords>
                                     <gmd:keyword>
-                                        <gco:CharacterString>Precipitation</gco:CharacterString>
+                                        <gco:CharacterString>Vegetation</gco:CharacterString>
                                     </gmd:keyword>
                                     <gmd:thesaurusName>
                                         <gmd:CI_Citation>
                                             <gmd:title>
-                                                <gco:CharacterString>CF</gco:CharacterString>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
                                             </gmd:title>
                                             <gmd:date></gmd:date>
                                         </gmd:CI_Citation>
@@ -1329,6 +1395,30 @@
                             </gmd:extent>
                         </gmd:MD_DataIdentification>
                     </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor>
+                                        <gco:CharacterString>EVI</gco:CharacterString> 
+                                    </gmd:descriptor>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d3675696">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>unitless</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
                 </gmd:MD_Metadata>
             </gmd:has>
             
@@ -1424,7 +1514,7 @@
                                     <gmd:thesaurusName>
                                         <gmd:CI_Citation>
                                             <gmd:title>
-                                                <gco:CharacterString>CF</gco:CharacterString>
+                                                <gco:CharacterString>OBOE</gco:CharacterString>
                                             </gmd:title>
                                             <gmd:date></gmd:date>
                                         </gmd:CI_Citation>
@@ -1465,6 +1555,30 @@
                             </gmd:extent>
                         </gmd:MD_DataIdentification>
                     </gmd:identificationInfo>
+                    <gmd:contentInfo>
+                        <gmd:MD_CoverageDescription>
+                            <gmd:attributeDescription>
+                                <gco:RecordType/>
+                            </gmd:attributeDescription>
+                            <gmd:contentType>
+                                <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                                    codeListValue="physicalMeasurement"/>
+                            </gmd:contentType>
+                            <gmd:dimension>
+                                <gmd:MD_Band>
+                                    <gmd:descriptor>
+                                        <gco:CharacterString>EVI</gco:CharacterString> 
+                                    </gmd:descriptor>
+                                    <gmd:units>
+                                        <gml:UnitDefinition gml:id="d3796">
+                                            <gml:identifier codeSpace=""/>
+                                            <gml:name>unitless</gml:name>
+                                        </gml:UnitDefinition>
+                                    </gmd:units>
+                                </gmd:MD_Band>
+                            </gmd:dimension>
+                        </gmd:MD_CoverageDescription>
+                    </gmd:contentInfo>
                 </gmd:MD_Metadata>
             </gmd:has>
         </gmd:DS_DataSet>
@@ -1774,6 +1888,30 @@
                     </gmd:extent>
                 </gmd:MD_DataIdentification>
             </gmd:identificationInfo>
+            <gmd:contentInfo>
+                <gmd:MD_CoverageDescription>
+                    <gmd:attributeDescription>
+                        <gco:RecordType/>
+                    </gmd:attributeDescription>
+                    <gmd:contentType>
+                        <gmd:MD_CoverageContentTypeCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#MD_CoverageContentTypeCode"
+                            codeListValue="physicalMeasurement"/>
+                    </gmd:contentType>
+                    <gmd:dimension>
+                        <gmd:MD_Band>
+                            <gmd:descriptor>
+                                <gco:CharacterString>EVI WCS</gco:CharacterString> 
+                            </gmd:descriptor>
+                            <gmd:units>
+                                <gml:UnitDefinition gml:id="d3676">
+                                    <gml:identifier codeSpace=""/>
+                                    <gml:name>unitless</gml:name>
+                                </gml:UnitDefinition>
+                            </gmd:units>
+                        </gmd:MD_Band>
+                    </gmd:dimension>
+                </gmd:MD_CoverageDescription>
+            </gmd:contentInfo>
             <gmd:dataQualityInfo>
                 <gmd:DQ_DataQuality>
                     <gmd:scope gco:nilReason="unknown"/>
@@ -1796,7 +1934,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the nasa hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[MODISDataset] | one of the nasa hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1808,7 +1946,7 @@
                                             <gmd:sourceCitation>
                                                 <gmd:CI_Citation>
                                                     <gmd:title>
-                                                        <gco:CharacterString>Source Produced</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedMODISDataset] | Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
                                                         <gco:CharacterString>one of the local hdf5s</gco:CharacterString>
@@ -1849,7 +1987,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the nasa hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[MODISDataset] | one of the nasa hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1864,7 +2002,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedMODISDataset] | one of the local hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1902,7 +2040,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the nasa hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[MODISDataset] | one of the nasa hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1917,7 +2055,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedMODISDataset] | one of the local hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1956,7 +2094,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedMODISDataset] | one of the local hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -1971,7 +2109,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local tiffs</gco:CharacterString>
+                                                        <gco:CharacterString>[ExtractedDataset] | one of the local tiffs</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2009,7 +2147,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedMODISDataset] | one of the local hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2024,7 +2162,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local tiffs</gco:CharacterString>
+                                                        <gco:CharacterString>[ExtractedDataset] | one of the local tiffs</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2062,7 +2200,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local hdf5s</gco:CharacterString>
+                                                        <gco:CharacterString>[DownloadedMODISDataset] | one of the local hdf5s</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2077,7 +2215,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local tiffs</gco:CharacterString>
+                                                        <gco:CharacterString>[ExtractedDataset] | one of the local tiffs</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2116,7 +2254,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local tiffs</gco:CharacterString>
+                                                        <gco:CharacterString>[ExtractedDataset] | one of the local tiffs</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2131,7 +2269,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local tiffs</gco:CharacterString>
+                                                        <gco:CharacterString>[ExtractedDataset] | one of the local tiffs</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2146,7 +2284,7 @@
                                                         <gco:CharacterString>Source Used</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>one of the local tiffs</gco:CharacterString>
+                                                        <gco:CharacterString>[ExtractedDataset] | one of the local tiffs</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2162,7 +2300,7 @@
                                                         <gco:CharacterString>Source Produced</gco:CharacterString>
                                                     </gmd:title>
                                                     <gmd:alternateTitle>
-                                                        <gco:CharacterString>the mosaicked evi raster</gco:CharacterString>
+                                                        <gco:CharacterString>[MosaicDataset] |the mosaicked evi raster</gco:CharacterString>
                                                     </gmd:alternateTitle>
                                                     <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
@@ -2200,9 +2338,24 @@
                                                   <gco:CharacterString>Source Used</gco:CharacterString>
                                                   </gmd:title>
                                                   <gmd:alternateTitle>
-                                                  <gco:CharacterString>EVI</gco:CharacterString>
+                                                      <gco:CharacterString>[MosaicDataset] |EVI</gco:CharacterString>
                                                   </gmd:alternateTitle>
                                                   <gmd:date gco:nilReason="unknown"/>
+                                                </gmd:CI_Citation>
+                                            </gmd:sourceCitation>
+                                        </gmd:LI_Source>
+                                    </gmd:source>
+                                    <gmd:source xlink:role="#SELF">
+                                        <gmd:LI_Source>
+                                            <gmd:sourceCitation>
+                                                <gmd:CI_Citation>
+                                                    <gmd:title>
+                                                        <gco:CharacterString>Source Produced</gco:CharacterString>
+                                                    </gmd:title>
+                                                    <gmd:alternateTitle>
+                                                        <gco:CharacterString>[PublishedMODISDataset] | the final wcs service</gco:CharacterString>
+                                                    </gmd:alternateTitle>
+                                                    <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>
                                             </gmd:sourceCitation>
                                         </gmd:LI_Source>
