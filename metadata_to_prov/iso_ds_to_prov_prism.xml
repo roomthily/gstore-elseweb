@@ -80,6 +80,13 @@
                                             </gmd:dateType>
                                         </gmd:CI_Date>
                                     </gmd:date>
+                                    <gmd:identifier>
+                                        <gmd:MD_Identifier>
+                                            <gmd:code>
+                                                <gco:CharacterString>[FileManifestation] | Downloadable Data</gco:CharacterString>
+                                            </gmd:code>
+                                        </gmd:MD_Identifier>
+                                    </gmd:identifier>
                                     <gmd:citedResponsibleParty>
                                         <gmd:CI_ResponsibleParty>
                                             <gmd:contactInfo>
@@ -259,6 +266,13 @@
                                             </gmd:dateType>
                                         </gmd:CI_Date>
                                     </gmd:date>
+                                    <gmd:identifier>
+                                        <gmd:MD_Identifier>
+                                            <gmd:code>
+                                                <gco:CharacterString>[FileManifestation] | Downloadable Data</gco:CharacterString>
+                                            </gmd:code>
+                                        </gmd:MD_Identifier>
+                                    </gmd:identifier>
                                 </gmd:CI_Citation>
                             </gmd:citation>
                             <gmd:abstract/>
@@ -419,6 +433,13 @@
                                             </gmd:dateType>
                                         </gmd:CI_Date>
                                     </gmd:date>
+                                    <gmd:identifier>
+                                        <gmd:MD_Identifier>
+                                            <gmd:code>
+                                                <gco:CharacterString>[FileManifestation] | Downloadable Data</gco:CharacterString>
+                                            </gmd:code>
+                                        </gmd:MD_Identifier>
+                                    </gmd:identifier>
                                 </gmd:CI_Citation>
                             </gmd:citation>
                             <gmd:abstract/>
@@ -578,6 +599,13 @@
                                             </gmd:dateType>
                                         </gmd:CI_Date>
                                     </gmd:date>
+                                    <gmd:identifier>
+                                        <gmd:MD_Identifier>
+                                            <gmd:code>
+                                                <gco:CharacterString>[FileManifestation] | Downloadable Data</gco:CharacterString>
+                                            </gmd:code>
+                                        </gmd:MD_Identifier>
+                                    </gmd:identifier>
                                 </gmd:CI_Citation>
                             </gmd:citation>
                             <gmd:abstract/>
@@ -669,7 +697,7 @@
         </gmd:DS_DataSet>
     </gmd:composedOf>
     <gmd:seriesMetadata>
-        <gmi:MI_Metadata id="SELF">
+        <gmi:MI_Metadata id="PRISM-WCS">
             <gmd:fileIdentifier>
                 <gco:CharacterString>RGIS::4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707::ISO-19115:2003</gco:CharacterString>
             </gmd:fileIdentifier>
@@ -732,10 +760,10 @@
                 <gco:Date>2013-12-06</gco:Date>
             </gmd:dateStamp>
             <gmd:metadataStandardName>
-                <gco:CharacterString>ISO 19115-2 Geographic Information - Metadata - Part 2: Extensions for Imagery and Gridded Data</gco:CharacterString>
+                <gco:CharacterString>ISO 19115 Data Series</gco:CharacterString>
             </gmd:metadataStandardName>
             <gmd:metadataStandardVersion>
-                <gco:CharacterString>ISO 19115-2:2009(E)</gco:CharacterString>
+                <gco:CharacterString>ISO 19115:DS</gco:CharacterString>
             </gmd:metadataStandardVersion>
             <gmd:dataSetURI>
                 <gco:CharacterString>4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707</gco:CharacterString>
@@ -806,7 +834,7 @@
                             <gmd:identifier>
                                 <gmd:MD_Identifier>
                                     <gmd:code>
-                                        <gco:CharacterString>Downloadable Data</gco:CharacterString>
+                                        <gco:CharacterString>[WCSManifestation] | Downloadable Data</gco:CharacterString>
                                     </gmd:code>
                                 </gmd:MD_Identifier>
                             </gmd:identifier>
@@ -898,6 +926,14 @@
                             </gmd:maintenanceAndUpdateFrequency>
                         </gmd:MD_MaintenanceInformation>
                     </gmd:resourceMaintenance>
+                    <gmd:resourceFormat>
+                        <gmd:MD_Format>
+                            <gmd:name>
+                                <gco:CharacterString>GeoTIFF</gco:CharacterString>
+                            </gmd:name>
+                            <gmd:version></gmd:version>
+                        </gmd:MD_Format>
+                    </gmd:resourceFormat>
                     <gmd:descriptiveKeywords>
                         <gmd:MD_Keywords>
                             <gmd:keyword>
@@ -1187,7 +1223,7 @@
                                             </gmd:sourceCitation>
                                         </gmd:LI_Source>
                                     </gmd:source>
-                                    <gmd:source xlink:role="#SELF">
+                                    <gmd:source xlink:role="#PRISM-WCS">
                                         <gmd:LI_Source>
                                             <gmd:sourceCitation>
                                                 <gmd:CI_Citation>
