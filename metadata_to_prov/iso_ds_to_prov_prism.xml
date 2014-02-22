@@ -1244,7 +1244,7 @@
                                             <gmi:softwareReference>
                                                 <gmd:CI_Citation>
                                                   <gmd:title>
-                                                  <gco:CharacterString>GSTORE</gco:CharacterString>
+                                                    <gco:CharacterString>GSTORE</gco:CharacterString>
                                                   </gmd:title>
                                                   <gmd:date gco:nilReason="unknown"/>
                                                 </gmd:CI_Citation>

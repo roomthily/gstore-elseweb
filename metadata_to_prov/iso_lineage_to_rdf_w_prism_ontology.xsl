@@ -295,15 +295,31 @@
                 </owl:NamedIndividual>
                 
                 <xsl:if test="$file-manifestation">
-                    <owl:NamedIndividual rdf:about="{fn:concat($instance, 'manifestion-', $source-id)}">
-                        <rdf:type rdf:resource="{fn:concat($schema-base-data, '#', $manifestation-type)}"/>
-                        <xsl:if test="$url-manifestation">
-                            <elseweb-data:hasFileDownloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
-                                <xsl:value-of select="$url-manifestation"/>
-                            </elseweb-data:hasFileDownloadURL>
-                        </xsl:if>
-                        <elseweb-data:encodedInFormat rdf:resource="{fn:concat($schema-base-data, '#', identificationInfo/MD_DataIdentification/resourceFormat/MD_Format/name/CharacterString)}"/>
-                    </owl:NamedIndividual>
+                    <xsl:choose>
+                        <xsl:when test="$manifestation-type = 'WCSManifestation'">
+                            <xsl:variable name="output-uri" select="dataSetURI/CharacterString"/>
+                            <owl:NamedIndividual rdf:about="{fn:concat($instance, 'manifestion-', $source-id)}">
+                                <rdf:type rdf:resource="{fn:concat($schema-base-data, '#', $manifestation-type)}"/>
+                                <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
+                                    <xsl:value-of select="fn:concat('http://gstore.unm.edu/apps/epscor/datasets/', $output-uri, '/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2')"/>
+                                </elseweb-data:hasCapabilitiesDocumentURL>
+                                <elseweb-edac:hasJSONCapabilitiesDigest rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
+                                    <xsl:value-of select="fn:concat('http://gstore.unm.edu/apps/epscor/datasets/', $output-uri, '/services.json')"/>
+                                </elseweb-edac:hasJSONCapabilitiesDigest>
+                            </owl:NamedIndividual>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <owl:NamedIndividual rdf:about="{fn:concat($instance, 'manifestion-', $source-id)}">
+                                <rdf:type rdf:resource="{fn:concat($schema-base-data, '#', $manifestation-type)}"/>
+                                <xsl:if test="$url-manifestation">
+                                    <elseweb-data:hasFileDownloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
+                                        <xsl:value-of select="$url-manifestation"/>
+                                    </elseweb-data:hasFileDownloadURL>
+                                </xsl:if>
+                                <elseweb-data:encodedInFormat rdf:resource="{fn:concat($schema-base-data, '#', identificationInfo/MD_DataIdentification/resourceFormat/MD_Format/name/CharacterString)}"/>
+                            </owl:NamedIndividual>
+                        </xsl:otherwise>
+                    </xsl:choose>
                 </xsl:if>
                 
                 <!-- the data band -->
@@ -417,6 +433,7 @@
         </rdf:RDF>
     </xsl:template>
     
+    <!-- for any of the text elements that have a type descriptor ([descriptor] | some other stuff) to use in the rdf:type elements -->
     <xsl:template name="get-identifier">
         <xsl:param name="text" select="()"/>
         <!-- split the processing step/alternative title text at the | to get the [NAME] -->
