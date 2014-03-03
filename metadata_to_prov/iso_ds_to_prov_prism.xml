@@ -4,7 +4,8 @@
     xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:gco="http://www.isotc211.org/2005/gco"
     xmlns:gmd="http://www.isotc211.org/2005/gmd" xmlns:gmi="http://www.isotc211.org/2005/gmi"
     xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:gsr="http://www.isotc211.org/2005/gsr"
-    xmlns="http://www.isotc211.org/2005/gmi" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:srv="http://www.isotc211.org/2005/srv" xmlns="http://www.isotc211.org/2005/gmi" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://www.isotc211.org/2005/gmi http://www.ngdc.noaa.gov/metadata/published/xsd/schema.xsd">
     <!-- FOR A PRISM EXAMPLE -->
     <gmd:composedOf>
@@ -931,7 +932,9 @@
                             <gmd:name>
                                 <gco:CharacterString>GeoTIFF</gco:CharacterString>
                             </gmd:name>
-                            <gmd:version></gmd:version>
+                            <gmd:version>
+                                
+                            </gmd:version>
                         </gmd:MD_Format>
                     </gmd:resourceFormat>
                     <gmd:descriptiveKeywords>
@@ -1009,6 +1012,139 @@
                     </gmd:extent>
                 </gmd:MD_DataIdentification>
             </gmd:identificationInfo>
+            
+            <!-- for the WCS service link -->
+            <gmd:identificationInfo>
+                <srv:SV_ServiceIdentification>
+                    <gmd:citation></gmd:citation>
+                    <gmd:abstract></gmd:abstract>
+                    <srv:serviceType>
+                        <gco:LocalName>OGC:WCS</gco:LocalName>
+                    </srv:serviceType>
+                    <srv:serviceTypeVersion>
+                        <gco:CharacterString>1.1.2</gco:CharacterString>
+                    </srv:serviceTypeVersion>
+                    <srv:couplingType>
+                        <srv:SV_CouplingType codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#SV_CouplingType" codeListValue="mixed"/>
+                    </srv:couplingType>
+                    <srv:containsOperations>
+                        <srv:SV_OperationMetadata>
+                            <srv:operationName>
+                                <gco:CharacterString>GetCapabilities</gco:CharacterString>
+                            </srv:operationName>
+                            <srv:DCP>
+                                <srv:DCPList codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#DCPList" codeListValue="HTTPGet"/>
+                            </srv:DCP>
+                            <srv:parameters>
+                                <srv:SV_Parameter>
+                                    <srv:name>
+                                        <gco:aName>
+                                            <gco:CharacterString>Service</gco:CharacterString>
+                                        </gco:aName>
+                                        <gco:attributeType>
+                                            <gco:TypeName>
+                                                <gco:aName>
+                                                    <gco:CharacterString>String</gco:CharacterString>
+                                                </gco:aName>
+                                            </gco:TypeName>
+                                        </gco:attributeType>
+                                    </srv:name>
+                                    <srv:direction>
+                                        <srv:SV_ParameterDirection>in</srv:SV_ParameterDirection>
+                                    </srv:direction>
+                                    <srv:optionality>
+                                        <gco:CharacterString>Mandatory</gco:CharacterString>
+                                    </srv:optionality>
+                                    <srv:repeatability>
+                                        <gco:Boolean>false</gco:Boolean>
+                                    </srv:repeatability>
+                                    <srv:valueType>
+                                        <gco:TypeName>
+                                            <gco:aName>
+                                                <gco:CharacterString>String</gco:CharacterString>
+                                            </gco:aName>
+                                        </gco:TypeName>
+                                    </srv:valueType>
+                                </srv:SV_Parameter>
+                            </srv:parameters>
+                            <srv:parameters>
+                                <srv:SV_Parameter>
+                                    <srv:name>
+                                        <gco:aName>
+                                            <gco:CharacterString>Version</gco:CharacterString>
+                                        </gco:aName>
+                                        <gco:attributeType>
+                                            <gco:TypeName>
+                                                <gco:aName>
+                                                    <gco:CharacterString>String</gco:CharacterString>
+                                                </gco:aName>
+                                            </gco:TypeName>
+                                        </gco:attributeType>
+                                    </srv:name>
+                                    <srv:direction>
+                                        <srv:SV_ParameterDirection>in</srv:SV_ParameterDirection>
+                                    </srv:direction>
+                                    <srv:optionality>
+                                        <gco:CharacterString>Mandatory</gco:CharacterString>
+                                    </srv:optionality>
+                                    <srv:repeatability>
+                                        <gco:Boolean>false</gco:Boolean>
+                                    </srv:repeatability>
+                                    <srv:valueType>
+                                        <gco:TypeName>
+                                            <gco:aName>
+                                                <gco:CharacterString>String</gco:CharacterString>
+                                            </gco:aName>
+                                        </gco:TypeName>
+                                    </srv:valueType>
+                                </srv:SV_Parameter>
+                            </srv:parameters>
+                            <srv:parameters>
+                                <srv:SV_Parameter>
+                                    <srv:name>
+                                        <gco:aName>
+                                            <gco:CharacterString>Request</gco:CharacterString>
+                                        </gco:aName>
+                                        <gco:attributeType>
+                                            <gco:TypeName>
+                                                <gco:aName>
+                                                    <gco:CharacterString>String</gco:CharacterString>
+                                                </gco:aName>
+                                            </gco:TypeName>
+                                        </gco:attributeType>
+                                    </srv:name>
+                                    <srv:direction>
+                                        <srv:SV_ParameterDirection>in</srv:SV_ParameterDirection>
+                                    </srv:direction>
+                                    <srv:optionality>
+                                        <gco:CharacterString>Mandatory</gco:CharacterString>
+                                    </srv:optionality>
+                                    <srv:repeatability>
+                                        <gco:Boolean>false</gco:Boolean>
+                                    </srv:repeatability>
+                                    <srv:valueType>
+                                        <gco:TypeName>
+                                            <gco:aName>
+                                                <gco:CharacterString>String</gco:CharacterString>
+                                            </gco:aName>
+                                        </gco:TypeName>
+                                    </srv:valueType>
+                                </srv:SV_Parameter>
+                            </srv:parameters>
+                            <srv:connectPoint>
+                                <gmd:CI_OnlineResource>
+                                    <gmd:linkage>
+                                        <gmd:URL>
+                                            http://gstore.unm.edu/apps/epscor/datasets/4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2
+                                        </gmd:URL>
+                                    </gmd:linkage>
+                                </gmd:CI_OnlineResource>
+                            </srv:connectPoint>
+                        </srv:SV_OperationMetadata>
+                    </srv:containsOperations>
+                </srv:SV_ServiceIdentification>
+            </gmd:identificationInfo>
+            
             <gmd:contentInfo>
                 <gmd:MD_CoverageDescription>
                     <gmd:attributeDescription>
@@ -1033,6 +1169,35 @@
                     </gmd:dimension>
                 </gmd:MD_CoverageDescription>
             </gmd:contentInfo>
+            <gmd:distributionInfo>
+                <gmd:MD_Distribution>
+                    <gmd:distributor>
+                        <gmd:MD_Distributor>
+                            <gmd:distributorContact></gmd:distributorContact>
+                            <gmd:distributorFormat>
+                                <gmd:MD_Format>
+                                    <gmd:name>
+                                        <gco:CharacterString>JSON</gco:CharacterString>
+                                    </gmd:name>
+                                    <gmd:version></gmd:version>
+                                </gmd:MD_Format>
+                            </gmd:distributorFormat>
+                            <gmd:distributorTransferOptions>
+                                <gmd:MD_DigitalTransferOptions>
+                                    <gmd:onLine>
+                                        <gmd:CI_OnlineResource>
+                                            <gmd:linkage>
+                                                <gmd:URL>http://gstore.unm.edu/apps/epscor/datasets/4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707/services.json</gmd:URL>
+                                            </gmd:linkage>
+                                        </gmd:CI_OnlineResource>
+                                    </gmd:onLine>
+                                </gmd:MD_DigitalTransferOptions>
+                            </gmd:distributorTransferOptions>
+                        </gmd:MD_Distributor>
+                    </gmd:distributor>
+                </gmd:MD_Distribution>
+            </gmd:distributionInfo>
+            
             <gmd:dataQualityInfo>
                 <gmd:DQ_DataQuality>
                     <gmd:scope gco:nilReason="unknown"/>
@@ -1257,6 +1422,7 @@
                     </gmd:lineage>
                 </gmd:DQ_DataQuality>
             </gmd:dataQualityInfo>
+
             <gmd:metadataMaintenance>
                 <gmd:MD_MaintenanceInformation>
                     <gmd:maintenanceAndUpdateFrequency gco:nilReason="unknown"/>
@@ -1318,5 +1484,6 @@
                 </gmd:MD_MaintenanceInformation>
             </gmd:metadataMaintenance>
         </gmi:MI_Metadata>
+        
     </gmd:seriesMetadata>
 </gmd:DS_Series>

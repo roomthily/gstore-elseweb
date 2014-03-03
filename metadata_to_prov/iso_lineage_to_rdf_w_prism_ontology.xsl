@@ -272,6 +272,13 @@
                     </xsl:call-template>
                 </xsl:variable>
                 
+                <!-- get the wcs getcapabilities link (if exists in the service description) -->
+                <xsl:variable name="wcs_link" select="identificationInfo/SV_ServiceIdentification[serviceType/LocalName='OGC:WCS']/containsOperations/SV_OperationMetadata[operationName/CharacterString='GetCapabilities']/connectPoint/CI_OnlineResource/linkage/URL"/>
+                
+                <!-- get the json digest (gstore getcapabilities, basically) if it exists in the distribution element -->
+                <xsl:variable name="json_link" select="distributionInfo/MD_Distribution/distributor/MD_Distributor[distributorFormat/MD_Format/name/CharacterString='JSON']/distributorTransferOptions/MD_DigitalTransferOptions/onLine/CI_OnlineResource/linkage/URL"/>
+                
+                
                 <owl:NamedIndividual rdf:about="{@id}">
                     <rdf:type rdf:resource="{fn:concat($schema-base-edac, '#', $object-type)}"/>
                     <elseweb-data:coversTimePeriod rdf:resource="{fn:concat($instance, 'duration-', $source-id)}"/>
@@ -300,12 +307,18 @@
                             <xsl:variable name="output-uri" select="dataSetURI/CharacterString"/>
                             <owl:NamedIndividual rdf:about="{fn:concat($instance, 'manifestion-', $source-id)}">
                                 <rdf:type rdf:resource="{fn:concat($schema-base-data, '#', $manifestation-type)}"/>
-                                <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
-                                    <xsl:value-of select="fn:concat('http://gstore.unm.edu/apps/epscor/datasets/', $output-uri, '/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2')"/>
-                                </elseweb-data:hasCapabilitiesDocumentURL>
-                                <elseweb-edac:hasJSONCapabilitiesDigest rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
-                                    <xsl:value-of select="fn:concat('http://gstore.unm.edu/apps/epscor/datasets/', $output-uri, '/services.json')"/>
-                                </elseweb-edac:hasJSONCapabilitiesDigest>
+                                
+                                <xsl:if test="$wcs_link != ''">
+                                    <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
+                                        <xsl:value-of select="$wcs_link"/>
+                                    </elseweb-data:hasCapabilitiesDocumentURL>
+                                </xsl:if>
+                                
+                                <xsl:if test="$json_link != ''">
+                                    <elseweb-edac:hasJSONCapabilitiesDigest rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
+                                        <xsl:value-of select="$json_link"/>
+                                    </elseweb-edac:hasJSONCapabilitiesDigest>
+                                </xsl:if>
                             </owl:NamedIndividual>
                         </xsl:when>
                         <xsl:otherwise>

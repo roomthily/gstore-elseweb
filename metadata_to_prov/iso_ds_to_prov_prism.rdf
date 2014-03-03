@@ -358,7 +358,9 @@
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/manifestion-PRISM-WCS">
       <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#WCSManifestation"/>
-      <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://gstore.unm.edu/apps/epscor/datasets/4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2</elseweb-data:hasCapabilitiesDocumentURL>
+      <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">
+                                            http://gstore.unm.edu/apps/epscor/datasets/4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2
+                                        </elseweb-data:hasCapabilitiesDocumentURL>
       <elseweb-edac:hasJSONCapabilitiesDigest rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://gstore.unm.edu/apps/epscor/datasets/4c118cb4-9ce7-41e2-b9b1-abf6ff0fb707/services.json</elseweb-edac:hasJSONCapabilitiesDigest>
    </owl:NamedIndividual>
    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/prism/instance/band-PRISM-WCS">

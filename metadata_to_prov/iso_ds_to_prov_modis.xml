@@ -82,6 +82,9 @@
                                     </gmd:date>
                                     <gmd:citedResponsibleParty>
                                         <gmd:CI_ResponsibleParty>
+                                            <gmd:organisationName>
+                                                <gco:CharacterString>NASA LPDAAC</gco:CharacterString>
+                                            </gmd:organisationName>
                                             <gmd:contactInfo>
                                                 <gmd:CI_Contact>
                                                     <gmd:onlineResource>
@@ -96,7 +99,9 @@
                                                     </gmd:onlineResource>
                                                 </gmd:CI_Contact>
                                             </gmd:contactInfo>
-                                            <gmd:role></gmd:role>
+                                            <gmd:role>
+                                                <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="originator"/>
+                                            </gmd:role>
                                         </gmd:CI_ResponsibleParty>
                                     </gmd:citedResponsibleParty>
                                 </gmd:CI_Citation>
@@ -131,7 +136,7 @@
                             <gmd:extent>
                                 <gmd:EX_Extent>
                                     <gmd:geographicElement>
-                                        <gmd:EX_GeographicBoundingBox id="geographicExtent_input">
+                                        <gmd:EX_GeographicBoundingBox>
                                             <gmd:westBoundLongitude>
                                                 <gco:Decimal>-107.930153271</gco:Decimal>
                                             </gmd:westBoundLongitude>
