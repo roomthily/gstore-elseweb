@@ -1,0 +1,24 @@
+<!-- basic external data provider information for the MD elements -->
+<gmd:citedResponsibleParty>
+    <gmd:CI_ResponsibleParty>
+        <!-- 
+            include a responsible party if it's an external source
+            for example, if you downloaded the file from the lpdaac,
+            add the daac as the responsible party "provider" here.
+            (see provider template)
+        -->
+        $provider
+        
+        <!-- 
+            if the source for this MD element is an external link,
+            include it here (see external link template)
+        -->
+        $external_link
+        
+        <!-- 
+            if including a provider element, also include a role  
+            (see provider role template)
+        -->
+        $provider_role
+    </gmd:CI_ResponsibleParty>
+</gmd:citedResponsibleParty>

@@ -1,0 +1,12 @@
+<!--
+    external provider role code template
+    
+    this is provided in two parts to handle the external link
+    element between the provider element and the provider's role
+-->
+<gmd:role>
+    <!-- 
+        rolecode: any valid role code gound in the ISO codelist
+    -->
+    <gmd:CI_RoleCode codeList="http://www.isotc211.org/2005/resources/Codelist/gmxCodelists.xml#CI_RoleCode" codeListValue="$rolecode"/>
+</gmd:role>

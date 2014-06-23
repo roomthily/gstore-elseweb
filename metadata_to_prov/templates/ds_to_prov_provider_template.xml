@@ -1,0 +1,13 @@
+<!--
+    external provider template
+    
+    this is provided in two parts to handle the external link
+    element between the provider element and the provider's role
+-->
+<gmd:organisationName>
+    <!-- 
+        provder: name of the external data provider (or any free text descriptor
+                 you would like to use)
+    -->
+    <gco:CharacterString>$provider</gco:CharacterString>
+</gmd:organisationName>

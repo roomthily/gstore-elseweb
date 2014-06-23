@@ -1,0 +1,87 @@
+<gmd:processStep>
+    <gmi:LE_ProcessStep id="$step_unique_id">
+        <gmd:description>
+            <!-- 
+                step_name = the name of the activity (from the ontology)
+                step_description = the standard process step description text
+            
+                ex. [Download] | Download HDF from nasa
+            -->
+            <gco:CharacterString>[$step_name] | $step_description</gco:CharacterString>
+        </gmd:description>
+        <gmd:dateTime>
+            <!-- 2013-12-12T00:00:00 -->
+            <gco:DateTime>$proc_date</gco:DateTime>
+        </gmd:dateTime>
+        <!-- the input entity elements. this can be repeated for however many inputs an activity uses.
+            ex: applying a mask requires the mask layer and the data layer so you would include two source elements
+            
+            source_used_id = unique identifer from one of the has MD records and preceded by #
+            ex: #OSU-PRISM-ASCII
+        
+            $source_type = the type of thing, defined by the ontology
+            $source_description = a brief text description for clarity
+            ex: [PRISMDataset] | download link for the prism
+        
+            <gmd:source xlink:role="source_used_id">
+               <gmd:LI_Source>
+                   <gmd:sourceCitation>
+                       <gmd:CI_Citation>
+                           <gmd:title>
+                               <gco:CharacterString>Source Used</gco:CharacterString>
+                           </gmd:title>
+                           <gmd:alternateTitle>
+                               <gco:CharacterString>[source_type] | source_description</gco:CharacterString>
+                           </gmd:alternateTitle>
+                           <gmd:date gco:nilReason="unknown"/>
+                       </gmd:CI_Citation>
+                   </gmd:sourceCitation>
+               </gmd:LI_Source>
+           </gmd:source>
+        -->
+        $input_sources
+        
+        <!--
+            $source_produced_id = unique identifer from one of the has MD records OR the final 
+            MI record (if the final output) and preceded by #
+            ex: #LOCAL-PRISM-ASCII
+            
+            NOTE: there can only be one of these, it's always one-to-one or many-to-one (at least in the 
+                  prov we've been handling) 
+        -->
+        <gmd:source xlink:role="$source_produced_id">
+            <gmd:LI_Source>
+                <gmd:sourceCitation>
+                    <gmd:CI_Citation>
+                        <gmd:title>
+                            <gco:CharacterString>Source Produced</gco:CharacterString>
+                        </gmd:title>
+                        <gmd:alternateTitle>
+                            <!-- 
+                                source_type = the type of thing, defined by the ontology
+                                source_description = a brief text description for clarity
+                                ex: [DownloadedPRISMDataset] | local copy of the downloaded ascii
+                            -->
+                            <gco:CharacterString>[$source_type] | $source_description</gco:CharacterString>
+                        </gmd:alternateTitle>
+                        <gmd:date gco:nilReason="unknown"/>
+                    </gmd:CI_Citation>
+                </gmd:sourceCitation>
+            </gmd:LI_Source>
+        </gmd:source>
+        <gmi:processingInformation>
+            <gmi:LE_Processing>
+                <gmi:identifier/>
+                <gmi:softwareReference>
+                    <gmd:CI_Citation>
+                        <gmd:title>
+                            <!-- like curl or gdal_translate-->
+                            <gco:CharacterString>$software_name</gco:CharacterString>
+                        </gmd:title>
+                        <gmd:date gco:nilReason="unknown"/>
+                    </gmd:CI_Citation>
+                </gmi:softwareReference>
+            </gmi:LE_Processing>
+        </gmi:processingInformation>
+    </gmi:LE_ProcessStep>
+</gmd:processStep>

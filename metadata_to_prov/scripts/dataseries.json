@@ -1,0 +1,86 @@
+{
+    "ds": {
+        "id": "",
+        "uuid": "",
+        "file_identifier": "",
+        "parameter": "",
+        "description": "",
+        "abstract": "", 
+        "purpose": "",
+        "spref": {
+            "name": "", 
+            "url": "", 
+            "epsg": ""
+        },
+        "pubdate": "",
+        "manifestation": {"type": "", "description": ""},
+        "file_type": "",
+        "file_type_version": "",
+        "service_link": "",
+        "json_link": "",
+        "bbox": {
+            "minx": "",
+            "miny": "", 
+            "maxx": "",
+            "maxy": ""
+        },
+        "start_date": "",
+        "end_date": "",
+        "band": {
+            "name": "",
+            "units": ""
+        },
+        "steps": [
+            {
+                "id": "",
+                "name": "",
+                'description": "",
+                "procdate": "",
+                "source_produced_id": "",
+                "source_type": "",
+                "source_description": "",
+                "software": "",
+                "inputs": [
+                    {
+                        "id": "",
+                        "type": "",
+                        "description": ""
+                    }
+                ]
+            }
+        ],
+        "mds": [
+            {
+                "id": "",
+                "filename": "",
+                "parameter": "",
+                "provider": {
+                    "name": "", 
+                    "role": ""
+                },
+                "external_link": "",
+                "spref": {
+                    "name": "", 
+                    "url": "", 
+                    "epsg": ""
+                },
+                "pubdate": "",
+                "manifestation": {"type": "", "description": ""},
+                "file_type": "",
+                "file_type_version": "",
+                "bbox": {
+                    "minx": "",
+                    "miny": "", 
+                    "maxx": "",
+                    "maxy": ""
+                },
+                "start_date": "",
+                "end_date": "",
+                "band": {
+                    "name": "",
+                    "units": ""
+                }
+            }
+        ]
+    }
+}

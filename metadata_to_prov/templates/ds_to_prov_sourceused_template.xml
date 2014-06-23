@@ -1,0 +1,32 @@
+<!-- 
+    input source template
+    
+    because there can be multiple inputs to a processing step
+    
+    see the processing step template
+-->
+
+<!-- 
+    source_used_id: id of the MD element (composedOf.DS_Dataset collection)
+    
+    NOTE: the MD id is preprended by a hash (#) for this attribute
+-->
+<gmd:source xlink:role="$source_used_id">
+    <gmd:LI_Source>
+        <gmd:sourceCitation>
+            <gmd:CI_Citation>
+                <gmd:title>
+                    <gco:CharacterString>Source Used</gco:CharacterString>
+                </gmd:title>
+                <gmd:alternateTitle>
+                    <!-- 
+                        source_type: type, based on the ontology, of the source element
+                        source_description: optional descriptive text of the input source
+                    -->
+                    <gco:CharacterString>[$source_type] | $source_description</gco:CharacterString>
+                </gmd:alternateTitle>
+                <gmd:date gco:nilReason="unknown"/>
+            </gmd:CI_Citation>
+        </gmd:sourceCitation>
+    </gmd:LI_Source>
+</gmd:source>
