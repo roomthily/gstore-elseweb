@@ -1,0 +1,946 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/modis.owl#"
+     xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/modis.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:elseweb-data="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:elseweb-edac="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#">
+    <owl:Ontology rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/modis.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Datatypes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema/anyURI -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema/anyURI"/>
+    
+
+
+    <!-- http://www.w3.org/2001/XMLSchema/dateTime -->
+
+    <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema/dateTime"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversRegion -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversRegion"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversTimePeriod -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#coversTimePeriod"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodedInFormat"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodingOfCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#encodingOfCharacteristic"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandIdentification -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandIdentification"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDataBand -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDataBand"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEndDate -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEndDate"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasGeospatialProjection -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasGeospatialProjection"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasManifestation"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasStartDate -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasStartDate"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#representsEntity -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#representsEntity"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#hadInput -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#hadInput"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#hadInputBandID -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#hadInputBandID"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#wasAssociatedWith -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#wasAssociatedWith"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#wasOutputBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#wasOutputBy"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#wasPublishedBy -->
+
+    <owl:ObjectProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#wasPublishedBy"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandName -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasBandName"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasCapabilitiesDocumentURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasCapabilitiesDocumentURL"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDateTime -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasDateTime"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEPSGCode -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasEPSGCode"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasFileDownloadURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasFileDownloadURL"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLeftLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLeftLongitude"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLowerLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasLowerLatitude"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasRightLongitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasRightLongitude"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUpperLatitude -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hasUpperLatitude"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#hasJSONCapabilitiesDigestURL -->
+
+    <owl:DatatypeProperty rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#hasJSONCapabilitiesDigestURL"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DatasetManipulationSoftware -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DatasetManipulationSoftware"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Download -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Download"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DownloadedMODISDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DownloadedMODISDataset"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractAndReproject -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractAndReproject"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractedDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractedDataset"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MODISDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MODISDataset"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Mosaic -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Mosaic"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MosaicDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MosaicDataset"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Publish -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Publish"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#PublishedMODISDataset -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#PublishedMODISDataset"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISWCSManifestation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISWCSManifestation"/>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Vegetation -->
+
+    <owl:Class rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Vegetation"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- date -->
+
+    <owl:NamedIndividual rdf:about="date">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+        <elseweb-data:hasDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema/dateTime">2011-11-20T00:00:00-07:00</elseweb-data:hasDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- wcs-modis-dataset -->
+
+    <owl:NamedIndividual rdf:about="wcs-modis-dataset">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#PublishedMODISDataset"/>
+        <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-fihk3ab1ocdk42k2nulq40ru09"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-edac:wasPublishedBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/publish-modis-c61vb2pu8t22jnmdcea42c9c8b"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+        <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/wcs-modis-manifestation-avrsv7fadr4r0mfmli95ct42k"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gstore.unm.edu/elseweb/GSTORE -->
+
+    <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/GSTORE">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DatasetManipulationSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gstore.unm.edu/elseweb/curl -->
+
+    <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/curl">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DatasetManipulationSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gstore.unm.edu/elseweb/gdal_merge -->
+
+    <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/gdal_merge">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DatasetManipulationSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://gstore.unm.edu/elseweb/gdalwarp -->
+
+    <owl:NamedIndividual rdf:about="http://gstore.unm.edu/elseweb/gdalwarp">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DatasetManipulationSoftware"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset1.hdf-data-manifestation -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset1.hdf-data-manifestation">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:hasFileDownloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://nasa.gov/data/dataset1.hdf</elseweb-data:hasFileDownloadURL>
+        <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset1.hdf-data-manifestation-downloaded -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset1.hdf-data-manifestation-downloaded">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset1.hdf-data-manifestation-downloaded-extracted -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset1.hdf-data-manifestation-downloaded-extracted">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:encodedInFormat rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset1.hdf-dataset -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset1.hdf-dataset">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MODISDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset1.hdf-data-manifestation"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset1.hdf-dataset-downloaded -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset1.hdf-dataset-downloaded">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DownloadedMODISDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset1.hdf-data-manifestation-downloaded"/>
+        <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-psg5970de51l87luuo7btvnc4o"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset1.hdf-dataset-downloaded-extracted -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset1.hdf-dataset-downloaded-extracted">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractedDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset1.hdf-data-manifestation-downloaded-extracted"/>
+        <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-c99bbbf71nnpq74s7ekp5pv73m"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-a0f15q1lghvh1c9bj66ogv6o4c"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset2.hdf-data-manifestation -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset2.hdf-data-manifestation">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:hasFileDownloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://nasa.gov/data/dataset2.hdf</elseweb-data:hasFileDownloadURL>
+        <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset2.hdf-data-manifestation-downloaded -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset2.hdf-data-manifestation-downloaded">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset2.hdf-data-manifestation-downloaded-extracted -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset2.hdf-data-manifestation-downloaded-extracted">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:encodedInFormat rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset2.hdf-dataset -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset2.hdf-dataset">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MODISDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset2.hdf-data-manifestation"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset2.hdf-dataset-downloaded -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset2.hdf-dataset-downloaded">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DownloadedMODISDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset2.hdf-data-manifestation-downloaded"/>
+        <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-o4o34pmlrfb9qkhn5hlb2v5anb"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset2.hdf-dataset-downloaded-extracted -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset2.hdf-dataset-downloaded-extracted">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractedDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset2.hdf-data-manifestation-downloaded-extracted"/>
+        <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-sl4fppmah9936g4d3ankt6oqjd"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-k7d5iq6nsjjpm5mpr6belka3mv"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset3.hdf-data-manifestation -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset3.hdf-data-manifestation">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:hasFileDownloadURL rdf:datatype="http://www.w3.org/2001/XMLSchema/anyURI">http://nasa.gov/data/dataset3.hdf</elseweb-data:hasFileDownloadURL>
+        <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset3.hdf-data-manifestation-downloaded -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset3.hdf-data-manifestation-downloaded">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:encodedInFormat rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset3.hdf-data-manifestation-downloaded-extracted -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset3.hdf-data-manifestation-downloaded-extracted">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:encodedInFormat rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset3.hdf-dataset -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset3.hdf-dataset">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MODISDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset3.hdf-data-manifestation"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset3.hdf-dataset-downloaded -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset3.hdf-dataset-downloaded">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#DownloadedMODISDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset3.hdf-data-manifestation-downloaded"/>
+        <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-tdn5c364o84ujdno0718uj4noo"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://nasa.gov/data/dataset3.hdf-dataset-downloaded-extracted -->
+
+    <owl:NamedIndividual rdf:about="http://nasa.gov/data/dataset3.hdf-dataset-downloaded-extracted">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractedDataset"/>
+        <elseweb-data:hasManifestation rdf:resource="http://nasa.gov/data/dataset3.hdf-data-manifestation-downloaded-extracted"/>
+        <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-68krrfd1e36grv40hi5mcogjob"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-kf3plqbf2m82gjqp5eu58vd3b1"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#esri-grid -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#esri-grid">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#hdf5">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-68krrfd1e36grv40hi5mcogjob -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-68krrfd1e36grv40hi5mcogjob">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+        <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-jjppdkudfdmcdego3kisq3hiss"/>
+        <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-2tc8hg44gpjpv9gjf9i0b391kt"/>
+        <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-sfrqm73skkfqq3m5shmvcpl97b"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-c99bbbf71nnpq74s7ekp5pv73m -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-c99bbbf71nnpq74s7ekp5pv73m">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+        <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-59ev3uir0v4i2mpffgrbit1la0"/>
+        <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-t6v3n8fojl9s0s8m5e3rp4bd2p"/>
+        <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-t22ejq4o5gai47k86esi1klbri"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-fihk3ab1ocdk42k2nulq40ru09 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-fihk3ab1ocdk42k2nulq40ru09">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+        <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-gkuo55i11f8iip6q81616h7tsv"/>
+        <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-d07c63tppe5oqt0mbv647n6irb"/>
+        <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-gpc3nj6qp11e07hpgob50ievor"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-59ev3uir0v4i2mpffgrbit1la0 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-59ev3uir0v4i2mpffgrbit1la0">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+        <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</elseweb-data:hasBandName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-gkuo55i11f8iip6q81616h7tsv -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-gkuo55i11f8iip6q81616h7tsv">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+        <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Some Band ID</elseweb-data:hasBandName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-jjppdkudfdmcdego3kisq3hiss -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-jjppdkudfdmcdego3kisq3hiss">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+        <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</elseweb-data:hasBandName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-njhflq2t6nuo16skar2e53t9u1 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-njhflq2t6nuo16skar2e53t9u1">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BandIdentification"/>
+        <elseweb-data:hasBandName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MODIS_Grid_16DAY_250m_500m_VI:250m 16 days EVI</elseweb-data:hasBandName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-sl4fppmah9936g4d3ankt6oqjd -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-sl4fppmah9936g4d3ankt6oqjd">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISDataBand"/>
+        <elseweb-data:hasBandIdentification rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-njhflq2t6nuo16skar2e53t9u1"/>
+        <elseweb-data:encodingOfCharacteristic rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-su91uo0u74f09gkh9f2dgs3cc3"/>
+        <elseweb-data:representsEntity rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-utmqtckde3i4cli1s4erq48qct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/date-vcu6iocb4aldc542c9m5nt79f1 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/date-vcu6iocb4aldc542c9m5nt79f1">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Date"/>
+        <elseweb-data:hasDateTime rdf:datatype="http://www.w3.org/2001/XMLSchema/dateTime">2010-11-01T00:00:00-06:00</elseweb-data:hasDateTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-o4o34pmlrfb9qkhn5hlb2v5anb -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-o4o34pmlrfb9qkhn5hlb2v5anb">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Download"/>
+        <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/curl"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset2.hdf-dataset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-psg5970de51l87luuo7btvnc4o -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-psg5970de51l87luuo7btvnc4o">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Download"/>
+        <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/curl"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset1.hdf-dataset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-tdn5c364o84ujdno0718uj4noo -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/download-tdn5c364o84ujdno0718uj4noo">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Download"/>
+        <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/curl"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset3.hdf-dataset"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#DateRange"/>
+        <elseweb-data:hasEndDate rdf:resource="date"/>
+        <elseweb-data:hasStartDate rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/date-vcu6iocb4aldc542c9m5nt79f1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-a0f15q1lghvh1c9bj66ogv6o4c -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-a0f15q1lghvh1c9bj66ogv6o4c">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractAndReproject"/>
+        <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdalwarp"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset1.hdf-dataset-downloaded"/>
+        <elseweb-edac:hadInputBandID rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-59ev3uir0v4i2mpffgrbit1la0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-k7d5iq6nsjjpm5mpr6belka3mv -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-k7d5iq6nsjjpm5mpr6belka3mv">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractAndReproject"/>
+        <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdalwarp"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset2.hdf-dataset-downloaded"/>
+        <elseweb-edac:hadInputBandID rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-njhflq2t6nuo16skar2e53t9u1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-kf3plqbf2m82gjqp5eu58vd3b1 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/extract-kf3plqbf2m82gjqp5eu58vd3b1">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#ExtractAndReproject"/>
+        <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdalwarp"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset3.hdf-dataset-downloaded"/>
+        <elseweb-edac:hadInputBandID rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-id-jjppdkudfdmcdego3kisq3hiss"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-2tc8hg44gpjpv9gjf9i0b391kt -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-2tc8hg44gpjpv9gjf9i0b391kt">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-d07c63tppe5oqt0mbv647n6irb -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-d07c63tppe5oqt0mbv647n6irb">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-su91uo0u74f09gkh9f2dgs3cc3 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-su91uo0u74f09gkh9f2dgs3cc3">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-t6v3n8fojl9s0s8m5e3rp4bd2p -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/index-t6v3n8fojl9s0s8m5e3rp4bd2p">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Index"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-dataset-el903nsj5n1r2re8d31p38u4f0 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-dataset-el903nsj5n1r2re8d31p38u4f0">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#MosaicDataset"/>
+        <elseweb-data:hasDataBand rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/band-fihk3ab1ocdk42k2nulq40ru09"/>
+        <elseweb-data:coversTimePeriod rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/duration-515f1te10h3ddfni1chs9a4c6s"/>
+        <elseweb-data:hasManifestation rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-dataset-manifestation-ta5v2cbavdnsi40tv0955655fl"/>
+        <elseweb-edac:wasOutputBy rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-gs08ostui8272lc1f4a47n2do3"/>
+        <elseweb-data:hasGeospatialProjection rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc"/>
+        <elseweb-data:coversRegion rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-dataset-manifestation-ta5v2cbavdnsi40tv0955655fl -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-dataset-manifestation-ta5v2cbavdnsi40tv0955655fl">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#FileManifestation"/>
+        <elseweb-data:encodedInFormat rdf:resource="http://provenanceweb.org/format/mime/image/tiff"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-gs08ostui8272lc1f4a47n2do3 -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-gs08ostui8272lc1f4a47n2do3">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Mosaic"/>
+        <elseweb-edac:wasAssociatedWith rdf:resource="http://gstore.unm.edu/elseweb/gdal_merge"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset1.hdf-dataset-downloaded-extracted"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset2.hdf-dataset-downloaded-extracted"/>
+        <elseweb-edac:hadInput rdf:resource="http://nasa.gov/data/dataset3.hdf-dataset-downloaded-extracted"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/projection-ldtbv96s2ldnsen1rmf4c2cugc">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#Projection"/>
+        <elseweb-data:hasEPSGCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4326</elseweb-data:hasEPSGCode>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/publish-modis-c61vb2pu8t22jnmdcea42c9c8b -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/publish-modis-c61vb2pu8t22jnmdcea42c9c8b">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Publish"/>
+        <elseweb-edac:hadInput rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/mosaic-dataset-el903nsj5n1r2re8d31p38u4f0"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/region-biun2jctk546pouq6fa6p1nlhg">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#BoxedGeographicRegion"/>
+        <elseweb-data:hasRightLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-107</elseweb-data:hasRightLongitude>
+        <elseweb-data:hasLeftLongitude rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">-110</elseweb-data:hasLeftLongitude>
+        <elseweb-data:hasLowerLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</elseweb-data:hasLowerLatitude>
+        <elseweb-data:hasUpperLatitude rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</elseweb-data:hasUpperLatitude>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-gpc3nj6qp11e07hpgob50ievor -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-gpc3nj6qp11e07hpgob50ievor">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Vegetation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-sfrqm73skkfqq3m5shmvcpl97b -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-sfrqm73skkfqq3m5shmvcpl97b">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Vegetation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-t22ejq4o5gai47k86esi1klbri -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-t22ejq4o5gai47k86esi1klbri">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Vegetation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-utmqtckde3i4cli1s4erq48qct -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/vegetation-utmqtckde3i4cli1s4erq48qct">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#Vegetation"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/wcs-modis-manifestation-avrsv7fadr4r0mfmli95ct42k -->
+
+    <owl:NamedIndividual rdf:about="http://ontology.cybershare.utep.edu/ELSEWeb/linked-data/edac/services/provenance/modis/wcs-modis-manifestation-avrsv7fadr4r0mfmli95ct42k">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-edac.owl#RGISWCSManifestation"/>
+        <elseweb-data:hasCapabilitiesDocumentURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/apps/epscor/datasets/bc68ffde-5ea6-4de3-aa1a-182b6b2aeab2/services/ogc/wcs?SERVICE=wcs&amp;REQUEST=GetCapabilities&amp;VERSION=1.1.2</elseweb-data:hasCapabilitiesDocumentURL>
+        <elseweb-edac:hasJSONCapabilitiesDigestURL rdf:datatype="http://www.w3.org/2001/XMLSchema#string">http://gstore.unm.edu/someURLToJSON</elseweb-edac:hasJSONCapabilitiesDigestURL>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://provenanceweb.org/format/mime/image/tiff -->
+
+    <owl:NamedIndividual rdf:about="http://provenanceweb.org/format/mime/image/tiff">
+        <rdf:type rdf:resource="http://ontology.cybershare.utep.edu/ELSEWeb/elseweb-data.owl#PayloadFormat"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.4.4) http://owlapi.sourceforge.net -->
+
