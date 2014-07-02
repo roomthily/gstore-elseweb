@@ -11,7 +11,7 @@
     
     NOTE: the MD id is preprended by a hash (#) for this attribute
 -->
-<gmd:source xlink:role="$source_used_id">
+<gmd:source xlink:href="$source_used_id">
     <gmd:LI_Source>
         <gmd:sourceCitation>
             <gmd:CI_Citation>

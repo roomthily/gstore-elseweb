@@ -14,7 +14,7 @@
     <!-- removed: xml:base="http://ontology.cybershare.utep.edu/ELSEWeb/edac/publishing/modis/modis.owl" -->
     
     
-    <xsl:import href="remove-namespaces.xsl" />
+    <xsl:import href="../../remove-namespaces.xsl" />
     <xsl:output method="xml" encoding="UTF-8" indent="yes"/>
     
     <xsl:param name="schema-base" select="'http://gstore.unm.edu/elseweb/'"/>
@@ -247,7 +247,7 @@
                 
                 <xsl:variable name="generated-by">
                     <!-- i.e. is it in a step with "Source Produced" -->
-                    <xsl:value-of select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/@id"/>
+                    <xsl:value-of select="$all-steps/LE_ProcessStep[source[@href=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/@id"/>
                 </xsl:variable>
                 
                 <!-- check for a band identifier -->
@@ -262,14 +262,14 @@
                         <!-- produced by some intermediate step -->
                         <xsl:when test="$generated-by != ''">
                             <xsl:call-template name="get-identifier">
-                                <xsl:with-param name="text" select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']/LI_Source/sourceCitation/CI_Citation/alternateTitle/CharacterString"/>
+                                <xsl:with-param name="text" select="$all-steps/LE_ProcessStep[source[@href=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']]/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Produced']/LI_Source/sourceCitation/CI_Citation/alternateTitle/CharacterString"/>
                             </xsl:call-template>
                         </xsl:when>
                         
                         <!-- not produced by a step, but used by a step (i.e. and initial object) -->
-                        <xsl:when test="$generated-by = '' and $all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']]">
+                        <xsl:when test="$generated-by = '' and $all-steps/LE_ProcessStep[source[@href=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']]">
                             <xsl:call-template name="get-identifier">
-                                <xsl:with-param name="text" select="$all-steps/LE_ProcessStep[source[@role=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']]/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']/LI_Source/sourceCitation/CI_Citation/alternateTitle/CharacterString"/>
+                                <xsl:with-param name="text" select="$all-steps/LE_ProcessStep[source[@href=concat('#', $source-id) and LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']]/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']/LI_Source/sourceCitation/CI_Citation/alternateTitle/CharacterString"/>
                             </xsl:call-template>
                         </xsl:when>
                         
@@ -414,7 +414,7 @@
                     
                     <!-- any input data objects -->
                     <xsl:for-each select="LE_ProcessStep/source[LI_Source/sourceCitation/CI_Citation/title/CharacterString = 'Source Used']">
-                        <xsl:variable name="role" select="fn:translate(@role, '#', '')"/>
+                        <xsl:variable name="role" select="fn:translate(@href, '#', '')"/>
                         <elseweb-edac:hadInput rdf:resource="{$role}"/>
                         
                         <!-- add the input band if there is one -->

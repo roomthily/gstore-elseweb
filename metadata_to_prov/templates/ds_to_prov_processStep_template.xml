@@ -49,7 +49,7 @@
             NOTE: there can only be one of these, it's always one-to-one or many-to-one (at least in the 
                   prov we've been handling) 
         -->
-        <gmd:source xlink:role="$source_produced_id">
+        <gmd:source xlink:href="$source_produced_id">
             <gmd:LI_Source>
                 <gmd:sourceCitation>
                     <gmd:CI_Citation>
