@@ -93,7 +93,7 @@ Note that this uses the Lineage-Extended schema (gmi:LE_ProcessStep) and not the
                         <gmd:dateTime>
                             <gco:DateTime>2013-12-12T00:00:00</gco:DateTime>
                         </gmd:dateTime>
-                        <gmd:source xlink:role="#InputDataset">
+                        <gmd:source xlink:href="#InputDataset">
                             <gmd:LI_Source>
                                 <gmd:sourceCitation>
                                     <gmd:CI_Citation>
@@ -108,7 +108,7 @@ Note that this uses the Lineage-Extended schema (gmi:LE_ProcessStep) and not the
                                 </gmd:sourceCitation>
                             </gmd:LI_Source>
                         </gmd:source>
-                        <gmd:source xlink:role="#OutputDataset">
+                        <gmd:source xlink:href="#OutputDataset">
                             <gmd:LI_Source>
                                 <gmd:sourceCitation>
                                     <gmd:CI_Citation>
@@ -196,7 +196,7 @@ Note that this uses the Lineage-Extended schema (gmi:LE_ProcessStep) and not the
 
 The Dataset identifier is the source citation's title. Note that this is not from the processing step's embedded source elements. The SoftwareAgent identifier is the processing step's software reference title. The Activity identifier is found in the processing step's description element as \[\{activity identifier\}\] | \{standard process description\}. 
 
-The trace relies on the processing step's embedded source elements to identify the order (input vs. output) and the source definition (lineage sources as opposed to the embedded sources). The input dataset is identified through the @role reference for embedded sources with 'Source Used' as the title. The output dataset is identified through the @role reference for embedded sources with 'Source Produced' as the title.
+The trace relies on the processing step's embedded source elements to identify the order (input vs. output) and the source definition (lineage sources as opposed to the embedded sources). The input dataset is identified through the @href reference for embedded sources with 'Source Used' as the title. The output dataset is identified through the @href reference for embedded sources with 'Source Produced' as the title.
 
 The processing step's input source is used in the activity's *used* element. The output source is used in the related dataset's *wasGeneratedBy* element. And the software reference is used as the activity's *wasAssociatedWith* element. Multiple input source elements are supported.
 
